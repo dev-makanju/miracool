@@ -94,6 +94,7 @@ header{
         align-items: center ;
         flex-direction: column ;
         overflow: hidden ;
+        z-index: 11;
 
         li{
             list-style-type: none;

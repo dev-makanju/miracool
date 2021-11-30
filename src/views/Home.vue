@@ -10,6 +10,20 @@
                  <div>{{ this.homeText }}</div>
             </div>
             <p>{{ this.info }}</p>
+               <div class="pic-icon-wrapper">
+                   <div class="images first">
+                       <img src="@/assets/icons/html.png" alt="">
+                   </div>
+                   <div class="images second">
+                       <img src="@/assets/icons/javascript.svg" alt="">
+                   </div>
+                   <div class="images third">
+                       <img src="@/assets/icons/laravel.png" alt="">
+                   </div>
+                   <div class="images last">
+                       <img width="50" src="@/assets/icons/vue.svg" alt="">
+                   </div>
+             </div>
         </div>
         <div class="home-dash image-wrapper">
              <div class="home-dash__image">
@@ -19,7 +33,7 @@
     </div>
     <div class="overlay"></div>
     <div class="icons-wrapper">
-         <i></i>
+         <div class="images first"></div>
     </div>
   </div>
 </template>
@@ -35,7 +49,7 @@ export default {
         lastname:'oluwafemi',
         stalk:'Front-end Developer',
         homeText:'Can We talk about your project ?',
-        info:'i design and code beautifully simple things , and i love what i do...'
+        info:'I design and code beautifully simple things , and i love what i do...'
     }
   }
 }
@@ -47,6 +61,7 @@ export default {
       background:  #156373;
       //position: relative;
       .contain{
+          position: relative; 
           display: flex;
           flex-direction: column-reverse ;
           width: 100%;
@@ -56,19 +71,31 @@ export default {
                flex-direction: row;
                justify-content: center;
                align-items: center;
+               height: 500px;
+
           }  
           .home-dash{
                padding: 40px 10px;
-               margin: 0px auto;
+               margin: 0px auto ;
+               
+
+               @media (max-width: 320px){
+                    width: 100%;
+               }
+
                &__text-wrapper{
                     h1{
-                        font-family:'Montserrat', sans-serif;
+                        font-family: 'Roboto Mono', monospace;
                         color: #eee;
                         font-weight: 600;
 
                         span{
-                             font-size: 22px;
+                             font-size: 20px;
                         }
+
+                         @media (min-width: 450px){
+                              font-size: 20px;
+                         }
                     }
 
                     h4{
@@ -80,6 +107,7 @@ export default {
                          max-width: 180px;
                          border-radius: 5px;
                          text-align: center;
+                         font-size: 17px;
                     }
 
                     div{
@@ -87,6 +115,10 @@ export default {
                         color: #eee;
                         font-weight: 600;
                         margin-top: 1em;
+
+                         @media (max-width: 450px){
+                              font-size: 22px;
+                         }
                     }
                }
 
@@ -94,15 +126,108 @@ export default {
                     color: #081418;
                     margin-top: 1em;
                     font-weight: 400;
+                    font-family: 'Montserrat', sans-serif;
+
+                    @media (max-width: 450px){
+                         font-size: 14px;
+                    }
                }
 
-          }  
+
+               .pic-icon-wrapper{
+                    display: inline-flex;
+                    gap: 4px;
+                    margin-top: 15px;
+
+                    .images img{
+                         width: 45px;
+                         padding: 4px;
+                    }
+
+                    .first{
+                          padding: 2px;
+                          border-radius: 17px;
+                          background: #081418;
+                          display: flex;
+                          box-shadow: 0px 2px 5px rgba(56, 55, 55, 0.3) , 0px 2px 7px 5px rgba(56, 55, 55, 0.2);
+                    }
+
+                    .second{
+                          padding: 2px;
+                          border-radius: 17px;
+                          background: #081418;
+                          display: flex ;
+                    }
+
+                    .third{
+                          padding: 2px;
+                          border-radius: 17px;
+                          background: #081418;
+                          display: flex ;
+                    }
+
+                    .last{
+                          padding: 2px;     
+                          border-radius: 17px;
+                          background: #081418;
+                          display: flex;
+                    }
+               }
+
+          }
 
           .home-dash  .home-dash__image{
                background: #1a96af;
                border-radius: 50%;
                box-shadow: 0px 2px 7px 5px rgba(33, 94, 90, 0.544), 0px 5px 7px 5px  rgba(33, 94, 90, 0.544) , 0px 5px 7px 5px  rgba(33, 94, 90, 0.544);
                overflow: hidden;
+               display: flex;
+               justify-content: center;
+               
+               @media (max-width: 320px){
+                     max-width: 300px;
+               }
+
+               @media (max-width: 280px){
+                     max-width: 260px;
+               }
+          }
+      }
+
+      .icons-wrapper .images{
+          padding: 10px;
+          background: #081418;
+          border-radius: 50%;
+          width: 50px;
+          display: flex ;
+
+          &.first{
+               width: 400px;
+               height: 400px;
+               opacity: .1;
+               transform: translateY(-250px) translateX(-250px);
+
+               img{
+                    width: 80px;
+               }
+          }
+      }
+
+      .overlay{
+           width: 100%;
+           height: 500px;
+           position: absolute;
+           top: 0px;
+      }
+
+      .icons-wrapper{
+          width: 100%;
+          height: 550px;
+          position: absolute;
+          top: 0px;
+
+          @media (min-width:450px) {
+               
           }
       }
   }
