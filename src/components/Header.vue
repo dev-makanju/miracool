@@ -8,15 +8,30 @@
                     <Hamburger @close-nav="isToggleNavigation"/>
                </div>
          </div>
-         <transition name="drop-down">
-            <div class="mobile-navbar" v-if="NavActive">
-             <div class="background__main">                
-                <div class="background-div"></div>
-                <div class="background-div"></div>
-                <div class="background-div"></div>
-                <div class="background-div"></div>
+            <div class="mobile-navbar">
+             <div class="background__main"> 
+                 <div>
+                    <transition name="first-anime">
+                        <div class="background-div"  v-if="NavActive"></div> 
+                    </transition>  
+                 </div>
+                 <div>
+                     <transition name="second-anime">
+                         <div class="background-div" v-if="NavActive"></div>
+                     </transition>
+                 </div>
+                 <div>
+                    <transition name="third-anime">
+                        <div class="background-div" v-if="NavActive"></div>
+                    </transition> 
+                 </div>
+                 <div>
+                    <transition name="fourth-anime">
+                       <div class="background-div" v-if="NavActive"></div>
+                    </transition>
+                 </div>            
              </div>
-             <div class="nav-text-overlay">
+             <div class="nav-text-overlay" id="overlay">
                 <ul class="nav links">
                    <li>Home</li>
                    <li>Works</li>
@@ -31,8 +46,7 @@
                   </ul>
                 </div>     
              </div>  
-         </div>
-         </transition>
+           </div>
     </header>        
 </template>
 
@@ -49,18 +63,31 @@
                 NavActive: null,
             }
         },
+        created(){
+            
+        },
         methods:{
             isToggleNavigation(){
                 this.NavActive = !this.NavActive
+                const overlay = document.getElementById("overlay");
+                if(this.NavActive){
+                    overlay.className = 'nav-text-overlay open'
+                }else{
+                    overlay.className = 'nav-text-overlay leave' 
+                }
+                return;
+            },
+            addOverlayClass(){
+                console.log(this.NavActive)
             }
-        }    
+        },
     }
 </script>
 
 <style lang="scss" scoped>
 
 header{
-    position: relative ;
+    position: relative;
     background:#156373;
 
     .nav-1{
@@ -80,7 +107,6 @@ header{
         font-family: 'Montserrat', sans-serif;
         span{
             font-size: 20px;
-
         }
     }
 
@@ -115,6 +141,11 @@ header{
             flex-direction:row ;
             width: 100vw;   
 
+            div{
+                height: 100vh;
+                flex: 1;
+            }
+
             .background-div{
                 flex: 1;
                 box-shadow: 0px 2px 5px rgba(110, 108, 108, 0.3) , 0px 2px 5px rgba(110, 108, 108, 0.3);
@@ -125,7 +156,43 @@ header{
 
         .nav-text-overlay{
             position: absolute;
-            z-index: 11;    
+            z-index: 11; 
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            opacity: 0;
+            transition: all .6s ease;
+
+            &.open{
+                 animation: slide-in 6s ease; 
+                 opacity: 7;  
+            }
+
+            &.leave{
+                 animation: slide-out 3s ease forwards; 
+                 opacity: 7;  
+            }
+
+            @keyframes slide-in{
+                0%{
+                    transform: translateX(-1400px);
+                }
+                100%{
+                    transform: translateX(0px);
+                }
+            }
+
+            @keyframes slide-out{
+                0%{
+                    transform: translateX(0px);
+                }
+                100%{
+                    transform: translateX(1400px);
+                    opacity: 0;
+                }
+            }
 
             .social__buttons .social{
                 display: flex;
@@ -140,6 +207,75 @@ header{
                 }
             }
         }
+    }
+
+    .first-anime-enter-active,
+    .first-anime-leave-active{
+        transition: all 2s ease ;
+    }
+
+    .first-anime-enter-from{
+        transform: translateY(-1200px);
+    }
+
+    .first-anime-enter-to{
+        transform: translateY(0px);
+    }
+
+    .first-anime-leave-to{
+        transform: translateY(-1200px);
+    }
+    /**second ilteration***/
+    .second-anime-enter-active,
+    .second-anime-leave-active{
+        transition: all 4s ease ;
+    }
+
+    .second-anime-enter-from{
+        transform: translateY(-1200px);
+    }
+
+    .second-anime-enter-to{
+        transform: translateY(0px);
+    }
+
+    .second-anime-leave-to{
+        transform: translateY(-1200px);
+    }
+
+    /**third ilteration**/
+    .third-anime-enter-active,
+    .third-anime-leave-active{
+        transition: all 6s ease ;
+    }
+
+    .third-anime-enter-from{
+        transform: translateY(-1200px);
+    }
+
+    .third-anime-enter-to{
+        transform: translateY(0px);
+    }
+
+    .third-anime-leave-to{
+        transform: translateY(-1200px);
+    }
+    /**fourth iltration**/
+    .fourth-anime-enter-active,
+    .fourth-anime-leave-active{
+        transition: all 8s ease;
+    }
+
+    .fourth-anime-enter-from{
+        transform: translateY(-1200px);
+    }
+
+    .fourth-anime-enter-to{
+        transform: translateY(0px);
+    }
+
+    .fourth-anime-leave-to{
+        transform: translateY(-1200px);
     }
 }
 
