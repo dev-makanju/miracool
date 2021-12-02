@@ -166,12 +166,12 @@ header{
             transition: all .6s ease;
 
             &.open{
-                 animation: slide-in 6s ease; 
+                 animation: slide-in 3s ease; 
                  opacity: 7;  
             }
 
             &.leave{
-                 animation: slide-out 3s ease forwards; 
+                 animation: slide-out 1s ease forwards; 
                  opacity: 7;  
             }
 
@@ -211,7 +211,7 @@ header{
 
     .first-anime-enter-active,
     .first-anime-leave-active{
-        transition: all 2s ease ;
+        transition: all 1s ease ;
     }
 
     .first-anime-enter-from{
@@ -228,7 +228,7 @@ header{
     /**second ilteration***/
     .second-anime-enter-active,
     .second-anime-leave-active{
-        transition: all 4s ease ;
+        transition: all 2s ease ;
     }
 
     .second-anime-enter-from{
@@ -246,7 +246,7 @@ header{
     /**third ilteration**/
     .third-anime-enter-active,
     .third-anime-leave-active{
-        transition: all 6s ease ;
+        transition: all 3s ease ;
     }
 
     .third-anime-enter-from{
@@ -263,7 +263,7 @@ header{
     /**fourth iltration**/
     .fourth-anime-enter-active,
     .fourth-anime-leave-active{
-        transition: all 8s ease;
+        transition: all 4s ease;
     }
 
     .fourth-anime-enter-from{

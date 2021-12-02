@@ -50,5 +50,9 @@ body{
    position: relative;
 }
 
+.flex{
+     display: flex ;
+}
+
 
 </style>
