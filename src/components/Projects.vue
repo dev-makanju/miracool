@@ -28,8 +28,8 @@
                                         <h3>Resume</h3>
                                    </div>
                                 </div>
-                                <div class="center__landing_page page flex">
-                                       <img class="hand" src="@/assets/portfolio-icons/index-finger.png" alt="">                                    
+                                <div class="center__landing_page page flex image-pix">
+                                       <img class="hand" src="@/assets/portfolio-icons/Femfinger.png" alt="">                                    
                                 </div>
                             </div>
                        </div>
@@ -74,7 +74,7 @@
         justify-content: center ;
         flex-direction: column;
         align-items: center;
-        gap: 4px;
+        gap: 4px ;
         color: rgb(194, 189, 189);
 
         @media (min-width: 768px) {
@@ -84,6 +84,12 @@
         &.txt{
             text-align: center;
             padding: 50px 0px;
+
+            @media (max-width:500px) {
+                padding: 20px 10px;
+                font-size: 16px;
+                font-weight: 600;
+            }
         }
 
         .center__landing_page{
@@ -91,6 +97,12 @@
             height: 250px;
             justify-content: center;
             transition: transform .5s ;
+            gap: 6px;
+
+            @media (min-width:768px){
+                width: 350px;
+                height: 600px;
+            }
 
             .hand{
                 width: 100px ;
@@ -108,10 +120,8 @@
                     }
                 }
  
-                @media (max-width: 500px) {
-                    perspective: 1000px;
-                    transform-style: preserve-3d;
-                    transform: rotateY(180deg);
+                @media (max-width:500px ) {
+                    transform: rotate(180deg); 
                 }
             }
 
@@ -121,7 +131,7 @@
 
             .page{
                 justify-content: center ;
-                align-items: center ;
+                align-items: center;
             }
 
             .first_c{
@@ -198,4 +208,10 @@
     }
 }
 
+
+.image-pix{
+    @media (max-width: 450px) {
+        transform: rotate(270deg);   
+    }
+}
 </style>    

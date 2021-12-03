@@ -27,7 +27,7 @@
 
 <style lang="scss">
  
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');//@font-name:Montserrat', sans-serif
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');//@font-name:'Montserrat', sans-serif
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display:ital,wght@1,400;1,500&display=swap');//@font-family: 'Playfair Display', serif;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display:ital,wght@1,400;1,500&family=Roboto+Mono:wght@500&display=swap');//font-family: 'Roboto Mono', monospace;
 
