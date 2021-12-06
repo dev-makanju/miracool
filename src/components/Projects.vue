@@ -3,7 +3,7 @@
                   <h1>{{ this.goal }}</h1>
                   <p>Bring your imagination to life...</p>
             </div> 
-                <div class="objectives__goals flex">
+            <div class="objectives__goals flex">
                         <div class="objectives__goals aim">
                            <div class="objectives__goals wrapper">
                                   <ul class="header__icon">
@@ -44,9 +44,9 @@
                                       </div>
                                   </ul>
                                </div>
-                            </div> 
-                       </div>
-                </div>
+                           </div> 
+                    </div>
+            </div>
 </template>
 
 <script>
@@ -58,7 +58,7 @@
         },
         data(){
             return{
-                goal:'Convert your idea to code',
+                goal:'Convert your idea to code </>',
                 text:'Amazing Landing Page'
             }
         
@@ -75,15 +75,19 @@
         flex-direction: column;
         align-items: center;
         gap: 4px ;
-        color: rgb(194, 189, 189);
+        color:rgb(50, 231, 213);
 
         @media (min-width: 768px) {
             flex-direction: row ;
         }
 
         &.txt{
-            text-align: center;
+            margin: 0px auto;
+            display : flex;
+            flex-direction: column;
+
             padding: 50px 0px;
+            color: #ffffff;
 
             @media (max-width:500px) {
                 padding: 20px 10px;
@@ -98,6 +102,7 @@
             justify-content: center;
             transition: transform .5s ;
             gap: 6px;
+            overflow: hidden ;
 
             @media (min-width:768px){
                 width: 350px;
@@ -152,12 +157,12 @@
 
         &.aim{
             max-width: 250px;
-            background: #071013;
+            background: #156373;
             border: 1px solid #156373;
             width: 350px;
             height: 250px;
-            box-shadow:  inset 5px 5px 10px #000000, 
-              inset -5px -5px 10px #000000;
+            box-shadow:  inset 5px 5px 10px #09333b, 
+              inset -5px -5px 10px #09333b;
             border-radius: 10px ;
             overflow: hidden ;
 
@@ -169,7 +174,7 @@
                 display: flex ;
                 inset: 0px ;
                 margin: 0px auto;
-                background: rgb(143, 135, 135);
+                background: #ffffff;
               
                .icon{
                    padding: 10px ;
@@ -194,7 +199,7 @@
                 justify-content: center;
                 align-items: center;
                 margin: 0px auto ;
-                border: 1px solid #e74e3c;
+                border: 2px solid #eee;
                 border-radius: 4px;
                 padding: 30px 5px ;
                 width: 150px ;
@@ -211,7 +216,7 @@
 
 .image-pix{
     @media (max-width: 450px) {
-        transform: rotate(270deg);   
+        transform: rotate(280deg);   
     }
 }
 </style>    

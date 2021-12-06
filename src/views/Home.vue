@@ -1,11 +1,11 @@
 <template>
-       <Landingpage/>
-       <div class="project-wrapper">
+        <Landingpage/>
+        <div class="project-wrapper">
              <Projects/>
-       </div>
-       <div class="overview">
-            <Overview class="over"/>
-       </div>
+        </div>
+        <div class="overview flex">
+            <Overview :project="project" v-for="(project , index) in projects" :key="index" class="over"/>
+        </div>
 </template>
 
 <script>
@@ -17,9 +17,30 @@ import Overview from '../components/Overview.vue'
 
 export default {
   name:'Home',
-  components:{
-       Landingpage , Projects , Overview
-  },
+     components:{
+          Landingpage , Projects , Overview
+     },
+     data(){
+          return{
+               projects:[
+                    {
+                         projectName:'Vanilla',
+                         ProjectDesc:'vanilla is web app build for transaction base purposes,and also used for product management',
+                         photoName:'building-gf93f8b712_1920'  
+                    },
+                    {
+                         projectName:'Vanilla',
+                         ProjectDesc:'vanilla is web app build for transaction base purposes,and also used for product management',
+                         photoName:'building-gf93f8b712_1920'
+                    },
+                    {
+                         projectName:'Vanilla',
+                         ProjectDesc:'vanilla is web app build for transaction base purposes,and also used for product management',
+                         photoName:'building-gf93f8b712_1920'
+                    },
+               ]
+          }
+     },
 }
 
 </script>
@@ -27,14 +48,20 @@ export default {
 <style lang="scss" scoped>
      .project-wrapper{
           background:  #0b3b44 ;
+          background-image: linear-gradient( 45deg , #092f36 25% , transparent 25% ,
+          transparent 75% , #092f36 75% , #092f36 ), 
+          linear-gradient( -45deg , #092f36 25% , transparent 25% ,
+          transparent 75% , #092f36 75% , #092f36 );
           padding: 40px 0px;
      }
 
      .overview{
           padding:  40px 0px;
           background:  #0b3b44 ;
+          gap: 10px;
+          flex-direction: column;
 
-          .over{
+          .over{    
                margin: 0px auto;
           }
      }

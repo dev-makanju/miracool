@@ -4,7 +4,7 @@
         <div class="home-dash">
             <div class="home-dash__text-wrapper">
                  <h4>{{ this.stalk }}</h4>
-                 <h1>{{ this.firstname}} <span>{{ this.lastname }}</span></h1>
+                 <h1>{{ this.firstname}}</h1>
             </div>
             <div class="home-dash__text-wrapper">
                  <div>{{ this.homeText }}</div>
@@ -45,10 +45,9 @@ export default {
   name:'Home',
   data(){
     return{
-        firstname:'Makanju',
-        lastname:'oluwafemi',
+        firstname:'Miracool',
         stalk:'Front-end Developer',
-        homeText:'Can We talk about your project ?',
+        homeText:'Can we talk about your project ?',
         info:'I design and code beautifully simple things , and i love what i do...'
     }
   }
@@ -59,6 +58,7 @@ export default {
 <style lang="scss" scoped>
   .container{
       background:  #156373;
+
       //position: relative;
       .contain{
           position: relative; 
@@ -85,16 +85,17 @@ export default {
 
                &__text-wrapper{
                     h1{
-                        font-family: 'Roboto Mono', monospace;
+                        font-family: 'Abril Fatface', cursive;
                         color: #eee;
                         font-weight: 600;
+                        font-size: 60px;
 
                         span{
                              font-size: 20px;
                         }
 
-                         @media (min-width: 450px){
-                              font-size: 20px;
+                         @media (max-width: 450px){
+                              font-size: 60px;
                          }
                     }
 
@@ -123,10 +124,10 @@ export default {
                }
 
                p{
-                    color: #081418;
+                    color: rgb(189, 183, 183);
                     margin-top: 1em;
                     font-weight: 400;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'Roboto Mono', monospace;
 
                     @media (max-width: 450px){
                          font-size: 14px;
@@ -183,6 +184,10 @@ export default {
                overflow: hidden;
                display: flex;
                justify-content: center;
+
+               @media (max-width:450px) {
+                    max-width: 300px;
+               }
                
                @media (max-width: 320px){
                      max-width: 300px;
@@ -225,10 +230,6 @@ export default {
           height: 550px;
           position: absolute;
           top: 0px;
-
-          @media (min-width:450px) {
-               
-          }
       }
   }
 </style>

@@ -1,30 +1,26 @@
-        <template>
-
-              <div class="project-overview flex">
-                    <div class="content-wrapper product">
-                         <img src="@/assets/portfolio-icons/building-gf93f8b712_1920.jpg" alt="">
+<template>
+        <div class="project-overview flex">
+            <div class="content-wrapper product">
+                    <img :src="require(`@/assets/portfolio-icons/${project.photoName}.jpg`)" alt="">
+            </div>
+            <div class="content-wrapper product">
+                <div class="description">
+                    <h1>
+                        <span style="color:">#</span>{{ project.projectName }}
+                    </h1>
+                    <p>{{ project.ProjectDesc }}</p>
+                    <div class="view-product">
+                        <router-link to="#" class="links">Go to site</router-link>
                     </div>
-                    <div class="content-wrapper product">
-                        <div class="description">
-                            <h1>
-                                <span style="color:">#</span>Vanilla
-                            </h1>
-                            <p>vanilla is web app build for transaction base purposes,
-                                and also used for product management</p>
-
-                            <div class="view-product">
-                                 <router-link to="#" class="links">Go to site</router-link>
-                            </div>
-                        </div>
-                    </div>
-               </div>
+                </div>
+            </div>
+        </div>
 </template>
 
 <script>
     export default {
         name:'overview',
-        
-        
+        props:['project']
     }
 </script>
 
@@ -33,32 +29,34 @@
 .project-overview{
     background: #398291;
     width: 80%;
-    flex: 1;
+    max-width: 800px;
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
 
     @media (min-width: 600px){
         flex-direction: row ;
+        &:nth-child(even){
+            flex-direction: row-reverse;
+        }
     }
 }
 
 .content-wrapper{
+    flex: 1;
 
     &.product{
-        width: 300px;
-        height: 300px;
-
+    
         @media (min-width: 600px) {
             flex-direction: row ;
-            width: 500px;
+            max-width: 500px;
             height: 400px;
         }
 
         img{
             width: 100%;
-            height: 100% ;
-            border-radius: 20px;
+            height: 100%;
+            border-radius: 20px ;
         }
 
         .description{
@@ -79,8 +77,12 @@
             }
 
             .view-product{
-                position: absolute;
-                bottom: 5em ;
+                padding: 10px 0px ;
+
+                @media (min-width: 600px){
+                    position: absolute;
+                    bottom: 4em ;
+                }
 
                 .links{
                     background:  #0e1a1f;

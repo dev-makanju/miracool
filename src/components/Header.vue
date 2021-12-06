@@ -1,4 +1,4 @@
-<template>
+    <template>
     <header>
          <div class="nav-1">
                <div class="nav-2 titles">
@@ -40,9 +40,15 @@
                 </ul>  
                 <div class="social__buttons">
                    <ul class="social links">
-                      <li>GH</li>
-                      <li>TW</li>
-                      <li>PB</li>
+                      <li>
+                           <font-awesome-icon icon="user-secret"/>
+                      </li>
+                      <li>
+                            <font-awesome-icon icon="user-secret"/>
+                      </li>
+                      <li>
+                            <font-awesome-icon icon="user-secret"/>
+                      </li>
                   </ul>
                 </div>     
              </div>  
@@ -59,7 +65,7 @@
         },
         data(){
             return{
-                Firstname:'Miracool',
+                Firstname:'M',
                 NavActive: null,
             }
         },
@@ -78,8 +84,18 @@
                 return;
             },
             addOverlayClass(){
-                console.log(this.NavActive)
+                console.log(this.NavActive);    
             }
+        },
+        watch:{
+            NavActive: function(){
+                if(this.NavActive){
+                     document.documentElement.style.overflow = 'hidden'  
+                }else{
+                     document.documentElement.style.overflow = 'auto'
+                }
+                return;
+            },
         },
     }
 </script>
@@ -115,7 +131,7 @@ header{
         inset: 0px;
         display: flex;
         height: 100vh;
-        width: 100vw ;
+        width: 100%;
         justify-content: center ;
         align-items: center ;
         flex-direction: column ;
@@ -124,11 +140,12 @@ header{
 
         li{
             list-style-type: none;
-            padding: 20px 40px;
+            padding: 20px 40px ;
             cursor: pointer;
             font-weight: 600 ;
-            font-size: 25px;
-            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-family: 'Abril Fatface', cursive ;
+;
             color: #eee;
 
             &:hover{
@@ -139,7 +156,7 @@ header{
         .background__main{
             display: flex;
             flex-direction:row ;
-            width: 100vw;   
+            width: 100%;   
 
             div{
                 height: 100vh;
@@ -150,7 +167,7 @@ header{
                 flex: 1;
                 box-shadow: 0px 0px .2px .1px rgba(110, 108, 108, 0.3) ;
                 height: 100vh;
-                background: #071013;
+                background-color: #071013;
             }
         }
 
@@ -163,7 +180,7 @@ header{
             justify-content:center;
             align-items: center;
             opacity: 0;
-            transition: all .6s ease;
+            transition: all .6s ease ;
 
             &.open{
                  animation: slide-in 3s ease; 
