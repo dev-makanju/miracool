@@ -1,5 +1,7 @@
 <template>
-        <Landingpage/>
+        <div class="landing_page">
+             <Landingpage/>
+        </div>
         <div class="project-wrapper">
              <Projects/>
         </div>
@@ -46,6 +48,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
      .project-wrapper{
           background:  #0b3b44 ;
           background-image: linear-gradient( 45deg , #092f36 25% , transparent 25% ,

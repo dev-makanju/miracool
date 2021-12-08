@@ -64,7 +64,7 @@ export default {
           position: relative; 
           display: flex;
           flex-direction: column-reverse ;
-          width: 100%;
+          width: 90%;
           margin: 0px auto;
           padding: 30px 2px;
           @media (min-width:768px) {
@@ -72,7 +72,7 @@ export default {
                justify-content: center;
                align-items: center;
                height: 500px;
-
+               width: 80%;
           }  
           .home-dash{
                padding: 40px 10px;

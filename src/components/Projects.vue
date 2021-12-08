@@ -24,9 +24,15 @@
                        <div class="objectives__goals wrapper">
                             <div class="center__landing_page flex">
                                 <div class="center__landing_page page flex">
-                                   <div class="first_c flex">
-                                        <h3>Resume</h3>
-                                   </div>
+                                   
+                                        <BreadcrumbItem>
+                                            <a class="tar_link_resume" href="https://drive.google.com/file/d/1qj9F3YMmcD6y95UHWDiiMTu1F6mvlQ26/view?usp=sharing" target="__blank">
+                                                <div class="first_c flex">
+                                                     <h3>Resume</h3>
+                                                </div> 
+                                            </a>
+                                         </BreadcrumbItem>
+                                   
                                 </div>
                                 <div class="center__landing_page page flex image-pix">
                                        <img class="hand" src="@/assets/portfolio-icons/Femfinger.png" alt="">                                    
@@ -145,10 +151,12 @@
                 box-shadow: 0px 2px 5px rgba(0 , 0 , 0 , 3 );
                 border-radius: 50%;
                 background: green;
-                box-shadow: 0 0 5px 10px hsl(129, 30%, 54% , .3),0 0 5px 15px hsl(92, 82%, 22% , .3);;
+                box-shadow: 0 0 5px 10px hsl(129, 30%, 54% , .3),0 0 5px 15px hsl(92, 82%, 22% , .3);
                 justify-content: center;
                 align-items: center;
                 
+                
+
                 h3{
                     padding: 10px;
                 }
@@ -219,5 +227,10 @@
     @media (max-width: 450px) {
         transform: rotate(280deg);   
     }
+}
+
+.tar_link_resume{
+    text-decoration: none;
+    color: #eeee;
 }
 </style>    

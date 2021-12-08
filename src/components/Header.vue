@@ -41,21 +41,21 @@
                    <ul class="social links">
                       <li>
                             <BreadcrumbItem>
-                                <a class="tar_link" href="https://github.com/dev-makanju">
+                                <a class="tar_link" href="https://github.com/dev-makanju" target="__blank">
                                     <font-awesome-icon :icon="['fab' , 'github']"/>
                                 </a>
                             </BreadcrumbItem>
                       </li>
                       <li>
                             <BreadcrumbItem>
-                                <a class="tar_link" href="https://twitter.com/mira_code">
+                                <a class="tar_link" href="https://twitter.com/mira_code" target="__blank">
                                     <font-awesome-icon :icon="['fab' , 'twitter']"/>
                                 </a>
                             </BreadcrumbItem>
                       </li>
                       <li>
                             <BreadcrumbItem>
-                                <a class="tar_link" href="https://www.linkedin.com/in/makanju-oluwafemi-emmanuel-2060bb184/">
+                                <a class="tar_link" href="https://www.linkedin.com/in/makanju-oluwafemi-emmanuel-2060bb184/" target="__blank">
                                     <font-awesome-icon :icon="['fab' , 'linkedin-in']"/>
                                 </a>
                             </BreadcrumbItem>
@@ -116,15 +116,16 @@
 header{
     position: relative;
     background:#156373;
+    width: 100%;
 
     .nav-1{
-         width: 85%;    
-         margin: 0px auto;
+         width: 90% ;    
+         margin: 0px auto ;
          display: flex ;
          justify-content: space-between;
          align-items: center;
 
-         @media (min-width: 768px){
+         @media (min-width:768px){
              width: 80%;
          }
     }
