@@ -7,12 +7,12 @@
                         <div class="objectives__goals aim">
                            <div class="objectives__goals wrapper">
                                   <ul class="header__icon">
-                                        <li><i class="">A</i></li>
-                                        <li><i class="">B</i></li>
-                                        <li><i class="">C</i></li>
-                                        <li><i class="">D</i></li>
-                                        <li><i class="">F</i></li>
-                                        <li><i class="">H</i></li>
+                                        <li><font-awesome-icon :icon="['fas' , 'edit']"/></li>
+                                        <li><font-awesome-icon :icon="['fas' , 'user-edit']"/></li>
+                                        <li><font-awesome-icon :icon="['far' , 'calendar-times']"/></li>
+                                        <li><font-awesome-icon :icon="['fas' , 'underline']"/></li>
+                                        <li><font-awesome-icon :icon="['fas' , 'paragraph']"/></li>
+                                        <li><font-awesome-icon :icon="['fas' , 'pencil-alt']"/></li>
                                   </ul>
                                   <div class="content-wrapper">
                                         <div class="text-content flex">
@@ -192,6 +192,7 @@
                  list-style-type: none;
                  width: 45px;
                  padding: 5px;
+                 color: rgb(49, 47, 47);
               }
             }
 

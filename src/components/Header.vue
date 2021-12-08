@@ -33,21 +33,32 @@
              </div>
              <div class="nav-text-overlay" id="overlay">
                 <ul class="nav links">
-                   <li>Home</li>
-                   <li>Works</li>
-                   <li>Projects</li>
-                   <li>Contact</li>
+                    <li><router-link class="links" :to="{name:'Home'}">Home</router-link></li>
+                    <li>Projects</li>
+                    <li> <router-link class="links" :to="{name:'Contact'}">Contact</router-link> </li>
                 </ul>  
                 <div class="social__buttons">
                    <ul class="social links">
                       <li>
-                           <font-awesome-icon icon="user-secret"/>
+                            <BreadcrumbItem>
+                                <a class="tar_link" href="https://github.com/dev-makanju">
+                                    <font-awesome-icon :icon="['fab' , 'github']"/>
+                                </a>
+                            </BreadcrumbItem>
                       </li>
                       <li>
-                            <font-awesome-icon icon="user-secret"/>
+                            <BreadcrumbItem>
+                                <a class="tar_link" href="https://twitter.com/mira_code">
+                                    <font-awesome-icon :icon="['fab' , 'twitter']"/>
+                                </a>
+                            </BreadcrumbItem>
                       </li>
                       <li>
-                            <font-awesome-icon icon="user-secret"/>
+                            <BreadcrumbItem>
+                                <a class="tar_link" href="https://www.linkedin.com/in/makanju-oluwafemi-emmanuel-2060bb184/">
+                                    <font-awesome-icon :icon="['fab' , 'linkedin-in']"/>
+                                </a>
+                            </BreadcrumbItem>
                       </li>
                   </ul>
                 </div>     
@@ -145,11 +156,23 @@ header{
             font-weight: 600 ;
             font-size: 20px;
             font-family: 'Abril Fatface', cursive ;
-;
             color: #eee;
+
+            a{
+                color: #fff;
+            }
 
             &:hover{
                 color: #156373;
+            }
+
+            .links{
+                text-decoration: none;
+                color: #eee;
+
+                &:hover{
+                    color:#0c2f36;
+                }
             }
         }
 
@@ -242,6 +265,7 @@ header{
     .first-anime-leave-to{
         transform: translateY(-1200px);
     }
+    
     /**second ilteration***/
     .second-anime-enter-active,
     .second-anime-leave-active{
@@ -295,5 +319,6 @@ header{
         transform: translateY(-1200px);
     }
 }
+
 
 </style>

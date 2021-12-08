@@ -33,6 +33,12 @@
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
+    transition: .5s ease;
+    box-shadow: 0px 2px 5px 5px rgba(0 , 0 , 0 , .3);
+
+    &:hover{
+        transform: scale(1.001) rotateZ(1.01deg);
+    }
 
     @media (min-width: 600px){
         flex-direction: row ;
@@ -49,8 +55,8 @@
     
         @media (min-width: 600px) {
             flex-direction: row ;
-            max-width: 500px;
-            height: 400px;
+            max-width: 500px ;
+            height: 400px ;
         }
 
         img{
