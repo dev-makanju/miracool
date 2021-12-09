@@ -1,5 +1,5 @@
 <template>
-        <div class="project-overview flex">
+        <div v-scrollanimation class="project-overview">
             <div class="content-wrapper product">
                     <img :src="require(`@/assets/portfolio-icons/${project.photoName}.jpg`)" alt="">
             </div>
@@ -12,7 +12,7 @@
                     <div class="view-product">
                         <router-link to="#" class="links">Go to site</router-link>
                     </div>
-                </div>
+                 </div>
             </div>
         </div>
 </template>
@@ -27,6 +27,7 @@
 <style lang="scss" scoped>
 
 .project-overview{
+    display: flex;
     background: #398291;
     width: 80%;
     max-width: 800px;
@@ -35,6 +36,17 @@
     border-radius: 20px;
     transition: .5s ease;
     box-shadow: 0px 2px 5px 5px rgba(0 , 0 , 0 , .3);
+
+    &.before-enter{
+        opacity: 0;
+        transform: scale(.5) scale(.2) rotateZ(-25deg);
+        transition: .3s ease-in-out all; 
+    }
+
+    &.enter{
+        opacity: 1;
+        transform: scale(1) rotateZ(0deg);;
+    }
 
     &:hover{
         transform: scale(1.001) rotateZ(1.01deg);
@@ -49,9 +61,20 @@
 }
 
 .content-wrapper{
-    flex: 1;
+    width: 100%;
+    height: 300px;
+
+    @media( min-width: 600px){
+        flex: 1;
+    }
 
     &.product{
+
+        img{
+            width: 100%;
+            height: 300px;
+            border-radius: 20px ;
+        }
     
         @media (min-width: 600px) {
             flex-direction: row ;
@@ -59,16 +82,22 @@
             height: 400px ;
         }
 
-        img{
-            width: 100%;
-            height: 100%;
-            border-radius: 20px ;
+        @media (min-width:600px){
+            img{
+               width: 100%;
+               height: 100%;
+               border-radius: 20px ;
+            }
         }
 
         .description{
-            padding: 30px 20px;
+            padding: 20px 10px;
             position: relative;
             height: 100%;
+
+            @media (min-width:768px) {
+                padding: 30px 20px;
+            }
 
             h1{
                 color: #eee;

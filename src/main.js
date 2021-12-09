@@ -4,6 +4,8 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import VueSmoothScroll from 'v-smooth-scroll'
+import  scrollAnimation from './directives/scrollanimation' 
+
 
 //vue-app/src/main.js
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -18,4 +20,6 @@ import { dom } from "@fortawesome/fontawesome-svg-core";
 dom.watch();
 
 
-createApp(App).component("font-awesome-icon" , FontAwesomeIcon ).use(VueSmoothScroll).use(store).use(router).mount('#app')
+createApp(App).component("font-awesome-icon" , FontAwesomeIcon ).directive('scrollanimation' , scrollAnimation).
+             use(VueSmoothScroll).
+             use(store).use(router).mount('#app');

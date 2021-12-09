@@ -85,7 +85,7 @@ export default {
 
                &__text-wrapper{
                     h1{
-                        font-family: 'Abril Fatface', cursive;
+                        font-family: 'Roboto Mono', monospace ;
                         color: #eee;
                         font-weight: 600;
                         font-size: 60px;
