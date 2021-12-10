@@ -6,7 +6,7 @@
              <Projects/>
         </div>
         <div class="overview flex">
-            <Overview :project="project" v-for="(project , index) in projects" :key="index" class="over"/>
+            <Overview :project="project" v-for="(project , index) in projects" :key="index" />
         </div>
 </template>
 
@@ -63,9 +63,7 @@ export default {
           background:  #0b3b44 ;
           gap: 10px;
           flex-direction: column;
-
-          .over{    
-               margin: 0px auto;
-          }
+          justify-content: center ;
+          align-items: center;
      }
 </style>

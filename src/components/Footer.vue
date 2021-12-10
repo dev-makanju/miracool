@@ -1,5 +1,5 @@
 <template>
-      <div class="footer flex">
+    <div class="footer flex">
             <div class="footer-wrapper">
                 <h1>{{ this.name }}</h1>
                 <p>Built with vue </p>
@@ -14,7 +14,7 @@
                 <div class="center__footer-wrapper">
                     <h3>Contact</h3>
                     <p><router-link class="links" :to="{name:'Home'}">Home</router-link></p>
-                    <p><router-link class="links" to="#">Project</router-link></p>
+                    <p><a class="links" href="#sec-project" v-smooth-scroll>Project</a></p>
                     <p><router-link class="links" :to="{name:'Contact'}">Contact me</router-link></p>
                 </div>
             </div>
@@ -54,6 +54,7 @@
 </script>
 
 <style lang="scss" scoped>
+
 .footer{
     margin: 0px auto;
     flex-direction: column;

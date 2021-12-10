@@ -1,5 +1,5 @@
 <template>
-        <div v-scrollanimation class="project-overview">
+        <div class="project-overview" id="sec-project">
             <div class="content-wrapper product">
                     <img :src="require(`@/assets/portfolio-icons/${project.photoName}.jpg`)" alt="">
             </div>
@@ -91,7 +91,7 @@
         }
 
         .description{
-            padding: 20px 10px;
+            padding: 10px 13px;
             position: relative;
             height: 100%;
 
@@ -112,10 +112,12 @@
             }
 
             .view-product{
-                padding: 10px 0px ;
+                padding: 10px 0px;
+                position: absolute;
+                bottom: 2em;
+
 
                 @media (min-width: 600px){
-                    position: absolute;
                     bottom: 4em ;
                 }
 

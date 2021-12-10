@@ -33,22 +33,27 @@
              </div>
              <div class="nav-text-overlay" id="overlay">
                 <ul class="nav links">
-                    <li><router-link class="links" :to="{name:'Home'}">Home</router-link></li>
-                    <li>Projects</li>
-                    <li> <router-link class="links" :to="{name:'Contact'}">Contact</router-link> </li>
+                    <li @click="close"><router-link class="links" :to="{name:'Home'}">Home</router-link>
+                </li>
+                    <li>
+                        <a class="links" href="#sec-project" v-smooth-scroll @click="closeOnScroll()">project</a>
+                    </li>
+                    <li @click="close"> 
+                        <router-link class="links" :to="{name:'Contact'}">Contact</router-link> 
+                    </li>
                 </ul>  
                 <div class="social__buttons">
                    <ul class="social links">
                       <li>
                             <BreadcrumbItem>
-                                <a class="tar_link" href="https://github.com/dev-makanju" target="__blank">
+                                <a class="tar_link" href="https://github.com/dev-makanju" target="__blank" >
                                     <font-awesome-icon :icon="['fab' , 'github']"/>
                                 </a>
                             </BreadcrumbItem>
                       </li>
                       <li>
                             <BreadcrumbItem>
-                                <a class="tar_link" href="https://twitter.com/mira_code" target="__blank">
+                                <a class="tar_link" href="https://twitter.com/mira_code" target="__blank" >
                                     <font-awesome-icon :icon="['fab' , 'twitter']"/>
                                 </a>
                             </BreadcrumbItem>
@@ -80,13 +85,10 @@
                 NavActive: null,
             }
         },
-        created(){
-            
-        },
         methods:{
             isToggleNavigation(){
-                this.NavActive = !this.NavActive
                 const overlay = document.getElementById("overlay");
+                this.NavActive = !this.NavActive
                 if(this.NavActive){
                     overlay.className = 'nav-text-overlay open'
                 }else{
@@ -94,9 +96,28 @@
                 }
                 return;
             },
-            addOverlayClass(){
-                console.log(this.NavActive);    
-            }
+            close(){
+                const overlay = document.getElementById("overlay");
+                this.NavActive = !this.NavActive
+                if(this.NavActive){
+                    overlay.className = 'nav-text-overlay open'
+                }else{
+                    overlay.className = 'nav-text-overlay leave' 
+                }
+                return;
+            },
+            closeOnScroll(){
+                const overlay = document.getElementById("overlay");
+                const navbar = document.getElementById("navbar");
+                this.NavActive = !this.NavActive
+                if(this.NavActive){
+                    overlay.className = 'nav-text-overlay open'
+                }else{
+                    overlay.className = 'nav-text-overlay leave' 
+                    navbar.classList.remove('open');
+                }
+                return;
+            },
         },
         watch:{
             NavActive: function(){
