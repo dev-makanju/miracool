@@ -6,7 +6,7 @@
             <div class="content-wrapper product">
                 <div class="description">
                     <h1>
-                        <span style="color:">#</span>{{ project.projectName }}
+                        <span style="color: rgb(39, 75, 10)">#</span><span style="color:#eee">{{ project.projectName }}</span>
                     </h1>
                     <p>{{ project.ProjectDesc }}</p>
                     <div class="view-product">
@@ -29,7 +29,7 @@
 .project-overview{
     display: flex;
     background: #398291;
-    width: 80%;
+    width: 90%;
     max-width: 800px;
     flex-direction: column;
     align-items: center;
