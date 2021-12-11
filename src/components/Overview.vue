@@ -37,17 +37,6 @@
     transition: .5s ease;
     box-shadow: 0px 2px 5px 5px rgba(0 , 0 , 0 , .3);
 
-    &.before-enter{
-        opacity: 0;
-        transform: scale(.5) scale(.2) rotateZ(-25deg);
-        transition: .3s ease-in-out all; 
-    }
-
-    &.enter{
-        opacity: 1;
-        transform: scale(1) rotateZ(0deg);;
-    }
-
     &:hover{
         transform: scale(1.001) rotateZ(1.01deg);
     }
@@ -69,7 +58,6 @@
     }
 
     &.product{
-
         img{
             width: 100%;
             height: 300px;

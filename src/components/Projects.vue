@@ -59,12 +59,9 @@
 
     export default {
         name:'Projects',
-        components:{
-           
-        },
         data(){
             return{
-                goal:'Convert your idea to code </>',
+                goal:"Let's talk about your project </>",
                 text:'Amazing Landing Page'
             }
         
@@ -91,14 +88,13 @@
             margin: 0px auto;
             display : flex;
             flex-direction: column;
-
             padding: 50px 0px;
             color: #ffffff;
 
             @media (max-width:500px) {
-                padding: 20px 10px;
-                font-size: 16px;
-                font-weight: 600;
+                padding: 20px 3px;
+                font-size: 10px;
+                font-weight: 400;
             }
         }
 

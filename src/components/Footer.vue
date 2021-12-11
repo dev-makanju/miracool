@@ -3,7 +3,10 @@
             <div class="footer-wrapper">
                 <h1>{{ this.name }}</h1>
                 <p>Built with vue </p>
-                <p>M  2021</p>
+                <p>
+                    <img src="@/assets/portfolio-icons/miracool-logo-removebg-preview.png" width="50" alt=""> 
+                     
+                </p>
             </div>
             <div class="footer-wrapper flex">
                 <div class="center__footer-wrapper">

@@ -6,6 +6,7 @@
              <Projects/>
         </div>
         <div class="overview flex">
+             <h1 style="color:green;"># <span style="color:#eee">Projects</span></h1>
             <Overview :project="project" v-for="(project , index) in projects" :key="index" />
         </div>
 </template>

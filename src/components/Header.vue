@@ -2,14 +2,14 @@
     <header>
          <div class="nav-1">
                <div class="nav-2 titles">
-                    <h1>{{ this.Firstname }}</h1>
+                    <img src="@/assets/portfolio-icons/miracool-logo-removebg-preview.png" width="80" alt="">
                </div>
                <div class="nav-2 titles">
                     <Hamburger @close-nav="isToggleNavigation"/>
                </div>
-         </div>
+        </div>
             <div class="mobile-navbar">
-             <div class="background__main"> 
+            <div class="background__main"> 
                  <div>
                     <transition name="first-anime">
                         <div class="background-div"  v-if="NavActive"></div> 

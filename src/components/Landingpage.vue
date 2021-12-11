@@ -75,7 +75,7 @@ export default {
                width: 80%;
           }  
           .home-dash{
-               padding: 40px 10px;
+               padding: 40px 4px;
                margin: 0px auto ;
                
 
@@ -95,7 +95,7 @@ export default {
                         }
 
                          @media (max-width: 450px){
-                              font-size: 60px;
+                              font-size: 40px;
                          }
                     }
 
@@ -115,10 +115,10 @@ export default {
                         font-size: 28px;
                         color: #eee;
                         font-weight: 600;
-                        margin-top: 1em;
 
                          @media (max-width: 450px){
-                              font-size: 22px;
+                              font-size: 18px;
+                              margin-top: 10px;
                          }
                     }
                }
