@@ -1,7 +1,7 @@
 <template>
         <div class="project-overview" id="sec-project">
             <div class="content-wrapper product">
-                    <img :src="require(`@/assets/portfolio-icons/${project.photoName}.jpg`)" alt="">
+                    <img v-lazy="require(`@/assets/portfolio-icons/${project.photoName}.jpg`)" alt="">
             </div>
             <div class="content-wrapper product">
                 <div class="description">

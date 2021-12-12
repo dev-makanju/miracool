@@ -1,5 +1,5 @@
 <template>
-     <div @click="isToggleNavbar" :class="[ 'menu-wrapper', isClickedNavIcon ? ' open' : '']" id="navbar">
+     <div @click="isToggleNavbar" :isClickedNavbar="returnNavbarState" :class="[ 'menu-wrapper', isClickedNavIcon ? ' open' : '']" id="navbar">
         <div class="menu-burger"></div>
         <div class="menu-burger"></div>
         <div class="menu-burger"></div>
@@ -9,6 +9,7 @@
 <script>
     export default {
         name:'Hamburger',
+        props:['isClickedNavbar'],
         data(){
             return{
                 isClickedNavIcon:null,
@@ -18,6 +19,9 @@
             isToggleNavbar(){
                 this.isClickedNavIcon = !this.isClickedNavIcon
                 this.$emit('close-nav');
+            },
+            returnNavbarState(){
+                this.isClickedNavIcon = !this.isClickedNavIcon
             }
         },
     }
@@ -37,8 +41,8 @@
     z-index: 111;
 
 
-    @media (min-width: 800px) {
-        min-width: 50px;
+    @media (min-width: 800px){
+        max-width: 50px;
     }
 
     .menu-burger{
@@ -46,10 +50,10 @@
         height: 4px;
         border: 3px solid #eeee;
         border-radius: 3px;
-        transition: all .5s ease-in-out ;
+        transition: all .3s ease;
         box-shadow: 0px 2px 5px rgba(56, 55, 55, 0.3) , 0px 2px 7px 5px rgba(56, 55, 55, 0.2);
 
-        @media (min-width: 800px) {
+        @media (min-width: 800px){
              min-width: 35px;
         }
 
@@ -75,7 +79,7 @@
 
     &.open :nth-child(even){
         opacity: 0;
-        margin-right: -20px ;    
+        margin-right: -10px;    
     }
 
     &.open :first-child{

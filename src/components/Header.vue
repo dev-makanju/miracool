@@ -5,7 +5,7 @@
                     <img src="@/assets/portfolio-icons/miracool-logo-removebg-preview.png" width="80" alt="">
                </div>
                <div class="nav-2 titles">
-                    <Hamburger @close-nav="isToggleNavigation"/>
+                    <Hamburger :isClickedNavbar="isClickedNavbar" @close-nav="isToggleNavigation"/>
                </div>
         </div>
             <div class="mobile-navbar">
@@ -31,12 +31,12 @@
                     </transition>
                  </div>            
              </div>
-             <div class="nav-text-overlay" id="overlay">
+             <div :class="['nav-text-overlay' , isToggleNavbar ? 'open' : 'leave']" >
                 <ul class="nav links">
                     <li @click="close"><router-link class="links" :to="{name:'Home'}">Home</router-link>
                 </li>
                     <li>
-                        <a class="links" href="#sec-project" v-smooth-scroll @click="closeOnScroll()">project</a>
+                        <a class="links" href="#sec-project" v-smooth-scroll>project</a>
                     </li>
                     <li @click="close"> 
                         <router-link class="links" :to="{name:'Contact'}">Contact</router-link> 
@@ -83,40 +83,16 @@
             return{
                 Firstname:'M',
                 NavActive: null,
+                isToggleNavbar: null,
             }
         },
         methods:{
             isToggleNavigation(){
-                const overlay = document.getElementById("overlay");
                 this.NavActive = !this.NavActive
-                if(this.NavActive){
-                    overlay.className = 'nav-text-overlay open'
-                }else{
-                    overlay.className = 'nav-text-overlay leave' 
-                }
-                return;
+                this.isToggleNavbar = !this.isToggleNavbar
             },
             close(){
-                const overlay = document.getElementById("overlay");
-                this.NavActive = !this.NavActive
-                if(this.NavActive){
-                    overlay.className = 'nav-text-overlay open'
-                }else{
-                    overlay.className = 'nav-text-overlay leave' 
-                }
-                return;
-            },
-            closeOnScroll(){
-                const overlay = document.getElementById("overlay");
-                const navbar = document.getElementById("navbar");
-                this.NavActive = !this.NavActive
-                if(this.NavActive){
-                    overlay.className = 'nav-text-overlay open'
-                }else{
-                    overlay.className = 'nav-text-overlay leave' 
-                    navbar.classList.remove('open');
-                }
-                return;
+                this.isToggleNavigation()
             },
         },
         watch:{
@@ -228,7 +204,7 @@ header{
             transition: all .6s ease ;
 
             &.open{
-                 animation: slide-in 3s ease; 
+                 animation: slide-in 1.3s ease; 
                  opacity: 7;  
             }
 
@@ -239,7 +215,7 @@ header{
 
             @keyframes slide-in{
                 0%{
-                    transform: translateX(-1400px);
+                    transform: translateX(-1200px);
                 }
                 100%{
                     transform: translateX(0px);
@@ -273,11 +249,11 @@ header{
 
     .first-anime-enter-active,
     .first-anime-leave-active{
-        transition: all 1s ease ;
+        transition: all .5s ease ;
     }
 
     .first-anime-enter-from{
-        transform: translateY(-1200px);
+        transform: translateY(-1400px);
     }
 
     .first-anime-enter-to{
@@ -285,17 +261,17 @@ header{
     }
 
     .first-anime-leave-to{
-        transform: translateY(-1200px);
+        transform: translateY(-1400px);
     }
     
     /**second ilteration***/
     .second-anime-enter-active,
     .second-anime-leave-active{
-        transition: all 2s ease ;
+        transition: all 1s ease ;
     }
 
     .second-anime-enter-from{
-        transform: translateY(-1200px);
+        transform: translateY(-1400px);
     }
 
     .second-anime-enter-to{
@@ -303,17 +279,17 @@ header{
     }
 
     .second-anime-leave-to{
-        transform: translateY(-1200px);
+        transform: translateY(-1400px);
     }
 
     /**third ilteration**/
     .third-anime-enter-active,
     .third-anime-leave-active{
-        transition: all 3s ease ;
+        transition: all 1.5s ease ;
     }
 
     .third-anime-enter-from{
-        transform: translateY(-1200px);
+        transform: translateY(-1400px);
     }
 
     .third-anime-enter-to{
@@ -321,12 +297,12 @@ header{
     }
 
     .third-anime-leave-to{
-        transform: translateY(-1200px);
+        transform: translateY(-1400px);
     }
     /**fourth iltration**/
     .fourth-anime-enter-active,
     .fourth-anime-leave-active{
-        transition: all 4s ease;
+        transition: all 2s ease;
     }
 
     .fourth-anime-enter-from{
