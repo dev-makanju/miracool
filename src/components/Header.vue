@@ -5,7 +5,11 @@
                     <img src="@/assets/portfolio-icons/miracool-logo-removebg-preview.png" width="80" alt="">
                </div>
                <div class="nav-2 titles">
-                    <Hamburger :isClickedNavbar="isClickedNavbar" @close-nav="isToggleNavigation"/>
+                    <div @click="isToggleNavbarIcon" :class="[ 'menu-wrapper', isClickedNavIcon ? ' open' : '']" id="navbar">
+                        <div class="menu-burger"></div>
+                        <div class="menu-burger"></div>
+                        <div class="menu-burger"></div>
+                    </div>
                </div>
         </div>
             <div :class="['mobile-navbar',NavActive ? 'open' : '' ]">
@@ -35,8 +39,8 @@
                 <ul class="nav links">
                     <li @click="close"><router-link class="links" :to="{name:'Home'}">Home</router-link>
                 </li>
-                    <li>
-                        <a class="links" href="#sec-project" v-smooth-scroll>project</a>
+                    <li @click="close">
+                        <a class="links"  href="#sec-project" v-smooth-scroll>project</a>
                     </li>
                     <li @click="close"> 
                         <router-link class="links" :to="{name:'Contact'}">Contact</router-link> 
@@ -73,27 +77,31 @@
 </template>
 
 <script>
-    import Hamburger from './Hamburger.vue'
+
     export default {
         name:'Header',
         components:{
-            Hamburger
+           //
         },
         data(){
             return{
-                Firstname:'M',
                 NavActive: null,
                 isToggleNavbar: null,
+                isClickedNavIcon:null,
             }
         },
         methods:{
-            isToggleNavigation(){
+            isToggleNavbarIcon(){
                 this.NavActive = !this.NavActive
                 this.isNavActive = !this.isNavActive
+                this.isClickedNavIcon = !this.isClickedNavIcon
             },
             close(){
-                this.isToggleNavigation()
+                this.isToggleNavbarIcon()
             },
+            returnNavbarState(){
+                this.isClickedNavIcon = !this.isClickedNavIcon
+            }
         },
         watch:{
             NavActive: function(){
@@ -157,7 +165,7 @@ header{
             list-style-type: none;
             padding: 20px 40px ;
             cursor: pointer;
-            font-weight: 600 ;
+            font-weight: 600;
             font-size: 20px;
             font-family: 'Abril Fatface', cursive ;
             color: #eee;
@@ -324,4 +332,71 @@ header{
     }
 }
 
+
+
+/**Navbar***/
+.menu-wrapper{
+    position: relative;
+    cursor: pointer ;
+    width: 50px;
+    height: 50px;
+    display: flex ;
+    justify-content: center ;
+    flex-direction: column ;
+    align-items: flex-end;
+    gap: 4px;
+    z-index: 111;
+
+
+    @media (min-width: 800px){
+        max-width: 50px;
+    }
+
+    .menu-burger{
+        width: 35px;
+        height: 4px;
+        border: 3px solid #eeee;
+        border-radius: 3px;
+        transition: all .3s ease;
+        box-shadow: 0px 2px 5px rgba(56, 55, 55, 0.3) , 0px 2px 7px 5px rgba(56, 55, 55, 0.2);
+
+        @media (min-width: 800px){
+             min-width: 35px;
+        }
+
+        &:nth-child(1){
+            width: 45px;
+
+            @media (min-width: 800px) {
+                min-width: 45px;
+            }
+        }
+
+        &:last-child{
+            width: 25px;
+
+            @media (min-width: 800px) {
+                 min-width: 25px;
+            }
+        }
+    }
+
+    /*****this is at the bottom to override the style*****/
+    /****when user click the navbar button****/
+
+    &.open :nth-child(even){
+        opacity: 0;
+        margin-right: -10px;    
+    }
+
+    &.open :first-child{
+        width: 45px;
+        transform: rotateZ(-405deg) translate(-13px);
+    }
+
+    &.open :last-child{
+        width: 45px;
+        transform: rotateZ(405deg)  translate(-13px);
+    }
+}
 </style>
