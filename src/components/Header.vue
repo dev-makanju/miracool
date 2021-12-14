@@ -8,30 +8,30 @@
                     <Hamburger :isClickedNavbar="isClickedNavbar" @close-nav="isToggleNavigation"/>
                </div>
         </div>
-            <div class="mobile-navbar">
-            <div class="background__main"> 
-                 <div>
-                    <transition name="first-anime">
-                        <div class="background-div"  v-if="NavActive"></div> 
-                    </transition>  
-                 </div>
-                 <div>
-                     <transition name="second-anime">
-                         <div class="background-div" v-if="NavActive"></div>
-                     </transition>
-                 </div>
-                 <div>
-                    <transition name="third-anime">
-                        <div class="background-div" v-if="NavActive"></div>
-                    </transition> 
-                 </div>
-                 <div>
-                    <transition name="fourth-anime">
-                       <div class="background-div" v-if="NavActive"></div>
-                    </transition>
-                 </div>            
-             </div>
-             <div :class="['nav-text-overlay' , isToggleNavbar ? 'open' : 'leave']" >
+            <div :class="['mobile-navbar',NavActive ? 'open' : '' ]">
+                <div class="background__main"> 
+                    <div>
+                        <transition name="first-anime">
+                            <div class="background-div"  v-if="NavActive"></div> 
+                        </transition>  
+                    </div>
+                    <div>
+                        <transition name="second-anime">
+                            <div class="background-div" v-if="NavActive"></div>
+                        </transition>
+                     </div>
+                     <div>
+                         <transition name="third-anime">
+                             <div class="background-div" v-if="NavActive"></div>
+                         </transition> 
+                     </div>
+                     <div>
+                        <transition name="fourth-anime">
+                            <div class="background-div" v-if="NavActive"></div>
+                        </transition>
+                     </div>            
+                </div>
+             <div :class="['nav-text-overlay' , NavActive ? 'open' : 'leave']">
                 <ul class="nav links">
                     <li @click="close"><router-link class="links" :to="{name:'Home'}">Home</router-link>
                 </li>
@@ -67,7 +67,7 @@
                       </li>
                   </ul>
                 </div>     
-             </div>  
+             </div>
            </div>
     </header>        
 </template>
@@ -89,7 +89,7 @@
         methods:{
             isToggleNavigation(){
                 this.NavActive = !this.NavActive
-                this.isToggleNavbar = !this.isToggleNavbar
+                this.isNavActive = !this.isNavActive
             },
             close(){
                 this.isToggleNavigation()
@@ -138,6 +138,7 @@ header{
     .mobile-navbar{
         position: absolute;
         inset: 0px;
+        transform: translateY(-1200px);
         display: flex;
         height: 100vh;
         width: 100%;
@@ -146,6 +147,11 @@ header{
         flex-direction: column ;
         overflow: hidden ;
         z-index: 11;
+        transition: .9s ease-in-out ;
+        
+        &.open{
+            transform: translateY(0px);
+        }
 
         li{
             list-style-type: none;
@@ -205,7 +211,7 @@ header{
 
             &.open{
                  animation: slide-in 1.3s ease; 
-                 opacity: 7;  
+                 opacity: 7;
             }
 
             &.leave{
@@ -317,6 +323,5 @@ header{
         transform: translateY(-1200px);
     }
 }
-
 
 </style>

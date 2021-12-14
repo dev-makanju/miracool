@@ -1,9 +1,10 @@
 import { createApp } from 'vue'
-import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import VueSmoothScroll from 'v-smooth-scroll'
 import VueLazyLoad from 'vue3-lazyload'
+import emailjs from 'emailjs-com';
+import App from './App.vue'
 
 
 
@@ -21,4 +22,4 @@ import { dom } from "@fortawesome/fontawesome-svg-core";
 dom.watch();
 
 
-createApp(App).component("font-awesome-icon" , FontAwesomeIcon).use(VueSmoothScroll , {duration:400} ).use(VueLazyLoad ).use(router).mount('#app');
+createApp(App).component("font-awesome-icon" , FontAwesomeIcon).use(VueSmoothScroll , {duration:400} ).use(emailjs).use(VueLazyLoad ).use(router).mount('#app');

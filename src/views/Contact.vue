@@ -1,23 +1,38 @@
 <template>
     <div class="main-wrapper flex">
-         <div class="main-wrapper-items">
+         <Modal v-if="modalActive" @close-modal="closeModal" :modalMessage="modalMessage"/>
+         <form ref="form" @submit.prevent="sendEmail" class="main-wrapper-items">
             <div class="form-wrapper flex">
                <h1>Get in touch</h1>
                <h4>Fill the form , it's easy...</h4>
-               <div class="send-messages flex">
+                <div class="send-messages flex">
                   <div class="text-input">
-                     <input type="text" placeholder="Email Address">
-                 </div>
-                 <div class="text-input">
-                     <input type="text" placeholder="Email Address">
-                </div>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                <div class="button-wrapper  ">
+                     <input type="text" 
+                            v-model="name"
+                            name="name"
+                            placeholder="Email Address">
+                  </div>
+                  <div class="text-input">
+                     <input 
+                          type="text" 
+                          v-model="email"
+                          email="email"
+                          placeholder="Email Address">
+                  </div>
+                    <textarea 
+                          name="body"
+                          v-model="message"
+                          id="" 
+                          cols="30" 
+                          rows="10">
+                          </textarea>
+                  <div class="button-wrapper">
                     <input type="submit" value="Send It">
-               </div>
+                    <sendEmail v-if="loading"/>
+                 </div>
+                </div>
             </div>
-            </div>
-         </div>
+         </form>
           <div class="main-wrapper-items flex">
              <div class="content-image">
                 <img src="@/assets/icons/email-re.png" alt="">
@@ -28,8 +43,63 @@
 </template>
 
 <script>
+    import emailjs from 'emailjs-com';
+    import sendEmail from '../components/sendEmail.vue'
+    import Modal from '../components/Modal.vue'
+
     export default {
-        
+         name:"contactUs",
+         components:{
+              sendEmail, Modal
+         },
+         data(){
+             return{
+                name:'',
+                email:'',
+                body:'',
+                modalMessage:'',
+                loading:null,
+                modalActive: null,   
+             }
+         },
+         methods:{
+             sendEmail(){
+                 try{  
+                    this.loading = true   
+                    emailjs.sendForm('miracool-0001', 'template_qv542ai', this.$refs.form,'user_hmi9MjpZGgcCsPU19wXoD', {
+                       name: this.name,
+                       email: this.email,
+                       message: this.message
+                    })
+                    this.loading = false
+                    this.modalMessage = ''
+                    this.modalActive = true;
+                    this.modalMessage = 'Thanks for contacting me , i will get back to you'
+                 }catch(error){
+                       this.modalMessage = ''
+                       this.modalActive = true;
+                       this.modalMessage = error
+                       console.log({error})
+                 }//reset feild
+                 this.name =''
+                 this.email = ''
+                 this.message = ''
+             },
+             closeModal(){
+                this.modalActive = !this.modalActive
+                this.name =''
+                this.email = ''
+                this.message = ''
+            },
+         },
+         watch:{
+            modalActive: function(){
+                if(this.modalActive){
+                    document.documentElement.style.overflow = 'hidden'
+                    return;
+                }document.documentElement.style.overflow = 'auto'
+            }
+         },
     }
 </script>
 
@@ -120,13 +190,18 @@
         font-family: 'Montserrat', sans-serif;
     }
 
-    .button-wrapper input{
+    .button-wrapper{
+        position: relative;
+
+        input{
         padding: 7px;
         background:  #156373;
         border: none;
         color: #eee;
         border-radius: 5px;
         cursor: pointer;
+    }
+
     }
     
 }
