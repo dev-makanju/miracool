@@ -17,7 +17,7 @@
                 <div class="center__footer-wrapper">
                     <h3>Contact</h3>
                     <p><router-link class="links" :to="{name:'Home'}">Home</router-link></p>
-                    <p><a class="links" href="#sec-project" v-smooth-scroll>Project</a></p>
+                    <p v-if="isProjectVisble"><a class="links" href="#sec-project" v-smooth-scroll>Project</a></p>
                     <p><router-link class="links" :to="{name:'Contact'}">Contact me</router-link></p>
                 </div>
             </div>
@@ -52,7 +52,26 @@
 
 <script>
     export default {
-        props:['name']
+        props:['name'],
+        data(){
+            return{
+                isProjectVisble: null,
+            }
+        },
+        methods:{
+            checkRoute(){
+                if(this.$route.name === "Contact"){
+                    this.isProjectVisble = false
+                    return;
+                }this.isProjectVisble = true
+            }  
+        },
+        watch:{
+            $route(){
+                this.checkRoute()
+            }
+        }
+
     }
 </script>
 

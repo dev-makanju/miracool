@@ -39,7 +39,7 @@
                 <ul class="nav links">
                     <li @click="close"><router-link class="links" :to="{name:'Home'}">Home</router-link>
                 </li>
-                    <li @click="close">
+                    <li @click="close" v-if="isProjectVisble">
                         <a class="links"  href="#sec-project" v-smooth-scroll>project</a>
                     </li>
                     <li @click="close"> 
@@ -88,6 +88,7 @@
                 NavActive: null,
                 isToggleNavbar: null,
                 isClickedNavIcon:null,
+                isProjectVisble:null,
             }
         },
         methods:{
@@ -101,6 +102,12 @@
             },
             returnNavbarState(){
                 this.isClickedNavIcon = !this.isClickedNavIcon
+            },
+            checkRoute(){
+                if(this.$route.name === "Contact"){
+                    this.isProjectVisble = false
+                    return;
+                }this.isProjectVisble = true
             }
         },
         watch:{
@@ -112,6 +119,9 @@
                 }
                 return;
             },
+            $route(){
+                this.checkRoute();
+            }
         },
     }
 </script>
