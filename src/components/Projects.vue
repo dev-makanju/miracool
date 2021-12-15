@@ -26,7 +26,7 @@
                                 <div class="center__landing_page page flex">
                                    
                                         <BreadcrumbItem>
-                                            <a class="tar_link_resume" href="https://drive.google.com/file/d/1qj9F3YMmcD6y95UHWDiiMTu1F6mvlQ26/view?usp=sharing" target="__blank">
+                                            <a class="tar_link_resume" href="/files/makanju.pdf" download="Makanju-oluwafemi">
                                                 <div class="first_c flex">
                                                      <h3>Resume</h3>
                                                 </div> 
