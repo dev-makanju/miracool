@@ -29,17 +29,20 @@ export default {
                     {
                          projectName:'Vanilla',
                          ProjectDesc:'vanilla is web app build for transaction base purposes,and also used for product management',
-                         photoName:'building-gf93f8b712_1920'  
+                         photoName:'building-gf93f8b712_1920', 
+                         stalk:'Vue | Node | express | mongo | veutify'
                     },
                     {
                          projectName:'Vanilla',
                          ProjectDesc:'vanilla is web app build for transaction base purposes,and also used for product management',
-                         photoName:'building-gf93f8b712_1920'
+                         photoName:'building-gf93f8b712_1920',
+                         stalk:'Vue | Node | express | mongo | veutify'
                     },
                     {
                          projectName:'Vanilla',
                          ProjectDesc:'vanilla is web app build for transaction base purposes,and also used for product management',
-                         photoName:'building-gf93f8b712_1920'
+                         photoName:'building-gf93f8b712_1920',
+                         stalk:'Vue | Node | express | mongo | veutify'
                     },
                ]
           }

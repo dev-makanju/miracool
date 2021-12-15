@@ -10,11 +10,11 @@
                      <input type="text" 
                             v-model="name"
                             name="name"
-                            placeholder="Email Address">
+                            placeholder="Name">
                   </div>
                   <div class="text-input">
                      <input 
-                          type="text" 
+                          type="email" 
                           v-model="email"
                           email="email"
                           placeholder="Email Address">
@@ -56,7 +56,7 @@
              return{
                 name:'',
                 email:'',
-                body:'',
+                message:'',
                 modalMessage:'',
                 loading:null,
                 modalActive: null,   
@@ -64,26 +64,31 @@
          },
          methods:{
              sendEmail(){
-                 try{  
-                    this.loading = true   
-                    emailjs.sendForm('miracool-0001', 'template_qv542ai', this.$refs.form,'user_hmi9MjpZGgcCsPU19wXoD', {
-                       name: this.name,
-                       email: this.email,
-                       message: this.message
-                    })
-                    this.loading = false
-                    this.modalMessage = ''
-                    this.modalActive = true;
-                    this.modalMessage = 'Thanks for contacting me , i will get back to you'
-                 }catch(error){
+                 if(this.name === "" || this.email === "" || this.message === ""){
+                     this.modalActive = true
+                     this.modalMessage = "Oops , all feild are required!";
+                 }else{
+                    try{  
+                       this.loading = true   
+                       emailjs.sendForm('miracool-0001', 'template_qv542ai', this.$refs.form,'user_hmi9MjpZGgcCsPU19wXoD', {
+                           name: this.name,
+                           email: this.email,
+                           message: this.message
+                       })
+                           this.loading = false
+                           this.modalMessage = ''
+                           this.modalActive = true;
+                           this.modalMessage = 'Thanks for contacting me , i will get back to you'
+                    }catch(error){
                        this.modalMessage = ''
                        this.modalActive = true;
                        this.modalMessage = error
                        console.log({error})
-                 }//reset feild
-                 this.name =''
-                 this.email = ''
-                 this.message = ''
+                    }//reset feild
+                      this.name =''
+                      this.email = ''
+                      this.message = ''
+                }
              },
              closeModal(){
                 this.modalActive = !this.modalActive

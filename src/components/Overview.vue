@@ -9,6 +9,10 @@
                         <span style="color: rgb(39, 75, 10)">#</span><span style="color:#eee">{{ project.projectName }}</span>
                     </h1>
                     <p>{{ project.ProjectDesc }}</p>
+                    <span style="font-weight; 600;">Technology used</span><br>
+                    <span>
+                        {{ project.stalk }}
+                    </span>
                     <div class="view-product">
                         <router-link to="#" class="links">Go to site</router-link>
                     </div>
@@ -25,7 +29,6 @@
 </script>
 
 <style lang="scss" scoped>
-
 .project-overview{
     display: flex;
     background: #398291;
