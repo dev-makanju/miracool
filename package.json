@@ -15,7 +15,6 @@
     "@fortawesome/vue-fontawesome": "^3.0.0-5",
     "core-js": "^3.6.5",
     "emailjs-com": "^3.2.0",
-    "postcss": "^8.4.5",
     "register-service-worker": "^1.7.1",
     "v-smooth-scroll": "^2.0.0-beta.1",
     "vue": "^3.0.0",
@@ -23,8 +22,6 @@
     "vue3-lazyload": "^0.2.5-beta"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^4.0.0",
-    "@fullhuman/vue-cli-plugin-purgecss": "~4.1.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-pwa": "~4.5.0",
