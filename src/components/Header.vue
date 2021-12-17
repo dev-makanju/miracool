@@ -43,6 +43,9 @@
                         <a class="links"  href="#sec-project" v-smooth-scroll>project</a>
                     </li>
                     <li @click="close"> 
+                        <router-link class="links" :to="{name:'About'}">About</router-link> 
+                    </li>
+                    <li @click="close"> 
                         <router-link class="links" :to="{name:'Contact'}">Contact</router-link> 
                     </li>
                 </ul>  
@@ -104,7 +107,7 @@
                 this.isClickedNavIcon = !this.isClickedNavIcon
             },
             checkRoute(){
-                if(this.$route.name === "Contact"){
+                if(this.$route.name === "Contact" || this.$route.name === "About"){
                     this.isProjectVisble = false
                     return;
                 }this.isProjectVisble = true

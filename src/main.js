@@ -4,9 +4,8 @@ import router from './router'
 import VueSmoothScroll from 'v-smooth-scroll'
 import VueLazyLoad from 'vue3-lazyload'
 import emailjs from 'emailjs-com';
+import  scrollAnimation from './directives/scrollanimation'
 import App from './App.vue'
-
-
 
 
 //vue-app/src/main.js
@@ -21,5 +20,4 @@ library.add(far);
 import { dom } from "@fortawesome/fontawesome-svg-core";
 dom.watch();
 
-
-createApp(App).component("font-awesome-icon" , FontAwesomeIcon).use(VueSmoothScroll , {duration:400} ).use(emailjs).use(VueLazyLoad ).use(router).mount('#app');
+createApp(App).component("font-awesome-icon" , FontAwesomeIcon).directive('scrollanimation' , scrollAnimation).use(VueSmoothScroll , {duration:400} ).use(emailjs).use(VueLazyLoad ).use(router).mount('#app');

@@ -1,7 +1,7 @@
 <template>
         <div class="project-overview" id="sec-project">
             <div class="content-wrapper product">
-                    <img v-lazy="require(`@/assets/portfolio-icons/${project.photoName}.jpg`)" alt="">
+                    <img v-scrollanimation      v-lazy="require(`@/assets/portfolio-icons/${project.photoName}.jpg`)" alt="">
             </div>
             <div class="content-wrapper product">
                 <div class="description">
@@ -29,6 +29,7 @@
 </script>
 
 <style lang="scss" scoped>
+
 .project-overview{
     display: flex;
     background: #398291;
@@ -65,6 +66,15 @@
             width: 100%;
             height: 300px;
             border-radius: 20px ;
+            transition: .3s ease-in-out all; 
+
+            &.before-enter{
+                transform: scale(1.3) scale(1.2) rotateZ(3deg);
+            }
+
+            &.enter{
+                transform: scale(1);
+            }
         }
     
         @media (min-width: 600px) {

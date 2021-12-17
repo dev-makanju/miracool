@@ -18,6 +18,7 @@
                     <h3>Contact</h3>
                     <p><router-link class="links" :to="{name:'Home'}">Home</router-link></p>
                     <p v-if="isProjectVisble"><a class="links" href="#sec-project" v-smooth-scroll>Project</a></p>
+                    <p><router-link class="links" :to="{name:'About'}">About</router-link></p>
                     <p><router-link class="links" :to="{name:'Contact'}">Contact me</router-link></p>
                 </div>
             </div>
@@ -60,7 +61,7 @@
         },
         methods:{
             checkRoute(){
-                if(this.$route.name === "Contact"){
+                if(this.$route.name === "Contact" || this.$route.name === "About"){
                     this.isProjectVisble = false
                     return;
                 }this.isProjectVisble = true
