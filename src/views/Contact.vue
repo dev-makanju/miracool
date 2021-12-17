@@ -8,20 +8,18 @@
                 <div class="send-messages flex">
                   <div class="text-input">
                      <input type="text" 
-                            v-model="name"
                             name="name"
                             placeholder="Name">
                   </div>
                   <div class="text-input">
                      <input 
                           type="email" 
-                          v-model="email"
                           email="email"
+                          name="email"
                           placeholder="Email Address">
                   </div>
                     <textarea 
-                          name="body"
-                          v-model="message"
+                          name="message"
                           id="" 
                           cols="30" 
                           rows="10">
@@ -53,44 +51,36 @@
               sendEmail, Modal
          },
          data(){
-             return{
-                name:'',
-                email:'',
-                message:'',
-                modalMessage:'',
-                loading:null,
-                modalActive: null,   
-             }
+              return{
+                  loading:false,
+                  modalMessage:null,
+                  modalActive:null,
+              }
          },
-         methods:{
-             sendEmail(){
-                 if(this.name === "" || this.email === "" || this.message === ""){
-                     this.modalActive = true
-                     this.modalMessage = "Oops , all feild are required!";
-                 }else{
-                    try{  
-                       this.loading = true   
-                       emailjs.sendForm('miracool-0001', 'template_qv542ai', this.$refs.form,'user_hmi9MjpZGgcCsPU19wXoD', {
-                           name: this.name,
-                           email: this.email,
-                           message: this.message
-                       })
-                           this.loading = false
-                           this.modalMessage = ''
-                           this.modalActive = true;
-                           this.modalMessage = 'Thanks for contacting me , i will get back to you'
-                    }catch(error){
-                       this.modalMessage = ''
-                       this.modalActive = true;
-                       this.modalMessage = error
-                       console.log({error})
-                    }//reset feild
-                      this.name =''
-                      this.email = ''
-                      this.message = ''
+         methods:{ 
+            sendEmail(){
+                if(this.name === "" || this.email === "" || this.message === ""){
+                    this.modalActive = true
+                    this.modalMessage = "Oops , all feild are required!";
+                }else{
+                    this.loading = true
+                    emailjs.sendForm("service_ijn7jjr" , "template_qv542ai", this.$refs.form , "user_hmi9MjpZGgcCsPU19wXoD")
+                    .then((result) => {
+                        console.log('SUCCESS!', result.text);
+                        this.loading = false
+                        this.modalMessage = ''
+                        this.modalMessage = 'Thanks for contacting me , i will get back to you'
+                        this.modalActive = true;
+                    }, (error) => {
+                        console.log('FAILED...', error.text);
+                        this.modalMessage = ''
+                        this.modalMessage = error
+                        this.modalActive = true;
+                    }); 
+                    this.$refs.form.reset();
                 }
              },
-             closeModal(){
+            closeModal(){
                 this.modalActive = !this.modalActive
                 this.name =''
                 this.email = ''
