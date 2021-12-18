@@ -65,7 +65,7 @@ export default {
      .overview{
           padding:  40px 0px;
           background:  #0b3b44 ;
-          gap: 10px;
+          gap: 2em ;
           flex-direction: column;
           justify-content: center ;
           align-items: center;

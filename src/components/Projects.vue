@@ -79,6 +79,7 @@
         align-items: center;
         gap: 4px ;
         color:rgb(50, 231, 213);
+        overflow: hidden;
 
         @media (min-width: 768px) {
             flex-direction: row ;

@@ -1,7 +1,7 @@
 <template>
         <div class="project-overview" id="sec-project">
             <div class="content-wrapper product">
-                    <img v-scrollanimation      v-lazy="require(`@/assets/portfolio-icons/${project.photoName}.jpg`)" alt="">
+                    <img v-scrollanimation  v-lazy="require(`@/assets/portfolio-icons/${project.photoName}.jpg`)" alt="">
             </div>
             <div class="content-wrapper product">
                 <div class="description">
@@ -56,6 +56,7 @@
 .content-wrapper{
     width: 100%;
     height: 300px;
+    overflow: hidden;
 
     @media( min-width: 600px){
         flex: 1;
@@ -77,10 +78,10 @@
             }
         }
     
-        @media (min-width: 600px) {
-            flex-direction: row ;
-            max-width: 500px ;
-            height: 400px ;
+        @media (min-width: 600px){
+            flex-direction: row;
+            max-width: 500px;
+            height: 400px;
         }
 
         @media (min-width:600px){

@@ -98,7 +98,11 @@
 
     .footer-wrapper{
         flex-direction: row;
-        gap: 4em;
+            gap: 2em;
+
+        @media (min-width:450px) {
+            gap: 4em;
+        }
 
         h2{
             margin-bottom: 10px; 
