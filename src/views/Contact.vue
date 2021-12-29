@@ -9,6 +9,7 @@
                   <div class="text-input">
                      <input type="text" 
                             name="name"
+                            v-model="name"
                             placeholder="Name">
                   </div>
                   <div class="text-input">
@@ -16,10 +17,12 @@
                           type="email" 
                           email="email"
                           name="email"
+                          v-model="email"
                           placeholder="Email Address">
                   </div>
                     <textarea 
                           name="message"
+                          v-model="message"
                           id="" 
                           cols="30" 
                           rows="10">
@@ -55,6 +58,9 @@
                   loading:false,
                   modalMessage:null,
                   modalActive:null,
+                  name:"",
+                  email:"",
+                  message:""
               }
          },
          methods:{ 

@@ -9,7 +9,13 @@
             <div class="home-dash__text-wrapper">
                  <div>{{ this.homeText }}</div>
             </div>
-            <p>{{ this.info }}</p>
+            <h2 class="skil-main">Skills</h2>
+            <p class="skil-tags">#programming language</p>
+            <p>{{ this.language }}</p>
+            <p class="skil-tags">#framework</p>
+            <p>{{ this.frameworks }}</p>
+            <p class="skil-tags">#storage</p>
+            <p>{{ this.storage }}</p>
                <div class="pic-icon-wrapper">
                    <div class="images first">
                        <img src="@/assets/icons/html.png" alt="">
@@ -47,8 +53,10 @@ export default {
     return{
         firstname:'Miracool',
         stalk:'Full-stalk Developer',
-        homeText:"let's about your project ?",
-        info:'I design and code beautifully simple things , and i love what i do...'
+        homeText:"let's talk about your project.",
+        language:'Javascript | php | python | Html | Css & Scss',
+        frameworks:'Vue || Nuxt || Node js || laravel',
+        storage:'Mysql | Nosql'
     }
   }
 }
