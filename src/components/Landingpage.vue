@@ -46,8 +46,8 @@ export default {
   data(){
     return{
         firstname:'Miracool',
-        stalk:'Front-end Developer',
-        homeText:'Can we talk about your project ?',
+        stalk:'Full-stalk Developer',
+        homeText:"let's about your project ?",
         info:'I design and code beautifully simple things , and i love what i do...'
     }
   }
@@ -184,6 +184,10 @@ export default {
                overflow: hidden;
                display: flex;
                justify-content: center;
+               padding: 10px 10px 0 0;
+               width: object-fit;
+               height: 300px;
+
 
                @media (max-width:450px) {
                     max-width: 300px;
