@@ -5,7 +5,7 @@
                     <img src="@/assets/portfolio-icons/miracool-logo-removebg-preview.png" width="80" alt="">
                </div>
                <div class="nav-2 titles">
-                    <div @click="isToggleNavbarIcon" :class="[ 'menu-wrapper', isClickedNavIcon ? ' open' : '']" id="navbar">
+                    <div @click="isToggleNavbarIcon" :class="['menu-wrapper', isClickedNavIcon ? ' open' : '']" id="navbar">
                         <div class="menu-burger"></div>
                         <div class="menu-burger"></div>
                         <div class="menu-burger"></div>
@@ -148,13 +148,6 @@ header{
          }
     }
 
-    .nav-2.titles h1{
-        color: #eeee;
-        font-family: 'Montserrat', sans-serif;
-        span{
-            font-size: 20px;
-        }
-    }
 
     .mobile-navbar{
         position: absolute;
@@ -357,6 +350,7 @@ header{
     justify-content: center ;
     flex-direction: column ;
     align-items: flex-end;
+    column-gap: 4px;
     gap: 4px;
     z-index: 111;
 

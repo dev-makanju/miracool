@@ -10,11 +10,11 @@
                  <div>{{ this.homeText }}</div>
             </div>
             <h2 class="skil-main">Skills</h2>
-            <p class="skil-tags">#programming language</p>
+            <h4 class="skil-tags"><span style="color:green">#</span>programming language</h4>
             <p>{{ this.language }}</p>
-            <p class="skil-tags">#framework</p>
+            <h4 class="skil-tags"><span style="color:green">#</span>framework</h4>
             <p>{{ this.frameworks }}</p>
-            <p class="skil-tags">#storage</p>
+            <h4 class="skil-tags"><span style="color:green">#</span>storage</h4>
             <p>{{ this.storage }}</p>
                <div class="pic-icon-wrapper">
                    <div class="images first">
@@ -64,6 +64,14 @@ export default {
 
 
 <style lang="scss" scoped>
+   .skil-main{
+         color: #fff;
+         margin-top: 2rem;
+    }
+    .skil-tags{
+        color: #eee;
+    }
+
   .container{
       background:  #156373;
 
@@ -107,6 +115,7 @@ export default {
                          }
                     }
 
+
                     h4{
                          font-family:'Playfair Display', serif;
                          color: #30afc9 ;
@@ -133,7 +142,7 @@ export default {
 
                p{
                     color: rgb(189, 183, 183);
-                    margin-top: 1em;
+                    margin-top: 2px;
                     font-weight: 400;
                     font-family: 'Roboto Mono', monospace;
 
