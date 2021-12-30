@@ -27,21 +27,22 @@ export default {
           return{
                projects:[
                     {
+                         projectName:'Triangu',
+                         ProjectDesc:'Triangu is a personal blog that focus on people and technology, i created this blog for dev development and also to keep writing about my love for technological advancement.',
+                         photoName:'Triangu', 
+                         stalk:'Vue | Nuxt | Node | express | mongo ',
+                         link:"http://Triangu.ml"
+                    },
+                    {
                          projectName:'Vanilla',
                          ProjectDesc:'vanilla is web app build for transaction base purposes,and also used for product management',
-                         photoName:'building-gf93f8b712_1920', 
+                         photoName:'Triangu',
                          stalk:'Vue | Node | express | mongo | veutify'
                     },
                     {
                          projectName:'Vanilla',
                          ProjectDesc:'vanilla is web app build for transaction base purposes,and also used for product management',
-                         photoName:'building-gf93f8b712_1920',
-                         stalk:'Vue | Node | express | mongo | veutify'
-                    },
-                    {
-                         projectName:'Vanilla',
-                         ProjectDesc:'vanilla is web app build for transaction base purposes,and also used for product management',
-                         photoName:'building-gf93f8b712_1920',
+                         photoName:'Triangu',
                          stalk:'Vue | Node | express | mongo | veutify'
                     },
                ]

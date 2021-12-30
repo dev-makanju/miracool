@@ -1,7 +1,7 @@
 <template>
         <div class="project-overview" id="sec-project">
             <div class="content-wrapper product">
-                    <img v-scrollanimation  v-lazy="require(`@/assets/portfolio-icons/${project.photoName}.jpg`)" alt="">
+                    <img v-scrollanimation  v-lazy="require(`@/assets/portfolio-icons/${project.photoName}.png`)" alt="">
             </div>
             <div class="content-wrapper product">
                 <div class="description">
@@ -14,7 +14,7 @@
                         {{ project.stalk }}
                     </span>
                     <div class="view-product">
-                        <router-link to="#" class="links">Go to site</router-link>
+                        <a target="__blank" :href="[project.link]" class="links">Go to site</a>
                     </div>
                  </div>
             </div>
