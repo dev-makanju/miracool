@@ -5,6 +5,8 @@ import VueSmoothScroll from 'v-smooth-scroll'
 import VueLazyLoad from 'vue3-lazyload'
 import emailjs from 'emailjs-com';
 import  scrollAnimation from './directives/scrollanimation'
+import 'animate.css';
+
 import App from './App.vue'
 
 

@@ -4,7 +4,7 @@
         <div class="home-dash">
             <div class="home-dash__text-wrapper">
                  <h4>{{ this.stalk }}</h4>
-                 <h1>{{ this.firstname}}</h1>
+                 <h1 class="animate__animated animate__zoomInLeft">{{ this.firstname}}</h1>
             </div>
             <div class="home-dash__text-wrapper">
                  <div>{{ this.homeText }}</div>
