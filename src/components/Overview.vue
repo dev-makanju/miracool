@@ -14,7 +14,7 @@
                         {{ project.stalk }}
                     </span>
                     <div class="view-product">
-                        <a target="__blank" :href="[project.link]" class="links">Go to site</a>
+                        <a target="__blank" to="[project.link]" class="links">Go to site</a>
                     </div>
                  </div>
             </div>
@@ -108,7 +108,6 @@
             }
 
             p{
-                padding: 30px 0px;
                 color: #eee;
                 font-family: 'Montserrat', sans-serif;
             }

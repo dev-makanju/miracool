@@ -28,7 +28,7 @@ export default {
                projects:[
                     {
                          projectName:'Triangu',
-                         ProjectDesc:'Triangu is a personal blog that focus on people and technology, i created this blog for dev development and also to keep writing about my love for technological advancement.',
+                         ProjectDesc:'Triangu is a personal blog that was built for dev development and also to keep writing about my love for technological advancement.',
                          photoName:'Triangu', 
                          stalk:'Vue | Nuxt | Node | express | mongo ',
                          link:"http://Triangu.ml"
