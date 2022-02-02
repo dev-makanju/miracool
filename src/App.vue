@@ -86,7 +86,6 @@ body{
 
 ::-webkit-scrollbar {
     width: 10px;
-    background:lightgray;
 }
 
 ::-webkit-scrollbar-track {

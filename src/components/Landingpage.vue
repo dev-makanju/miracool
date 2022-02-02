@@ -1,7 +1,16 @@
 <template>
   <div class="container">
-    <div class="contain">
-        <div class="home-dash">
+     <!--container-overlay-->
+     <div class="icons-wrapper">
+        <div class="images first"></div>
+     </div>
+     <div class="overlay"></div>
+     <div class="move-bar"></div>
+     <!---background overlay--->
+     <!---top layer-->
+     <div class="contain">
+        <div class="main-wrapper">
+            <div class="home-dash">
             <div class="home-dash__text-wrapper">
                  <h4>{{ this.stalk }}</h4>
                  <h1 class="animate__animated animate__zoomInLeft">{{ this.firstname}}</h1>
@@ -9,26 +18,38 @@
             <div class="home-dash__text-wrapper">
                  <div>{{ this.homeText }}</div>
             </div>
-            <h2 class="skil-main">Skills</h2>
+
+            <h3 class="skil-main">Skills</h3>
+
             <h4 class="skil-tags"><span style="color:green">#</span>programming language</h4>
-            <p>{{ this.language }}</p>
+            <!---languages-->
+            <p class="lang-style" v-for="language in languages" :key="language">
+               {{ language }}
+            </p>
+            <!--framework-->
             <h4 class="skil-tags"><span style="color:green">#</span>framework</h4>
-            <p>{{ this.frameworks }}</p>
+            <p class="frame-style" v-for="framework in frameworks" :key="framework">
+               {{ framework }}
+            </p>
+            <!--storage-->
             <h4 class="skil-tags"><span style="color:green">#</span>storage</h4>
-            <p>{{ this.storage }}</p>
-               <div class="pic-icon-wrapper">
-                   <div class="images first">
-                       <img src="@/assets/icons/html.png" alt="">
-                   </div>
-                   <div class="images second">
-                       <img src="@/assets/icons/javascript.svg" alt="">
-                   </div>
-                   <div class="images third">
-                       <img src="@/assets/icons/laravel.png" alt="">
-                   </div>
-                   <div class="images last">
-                       <img width="50" src="@/assets/icons/vue.svg" alt="">
-                   </div>
+            <p class="lang-style" v-for="storage in storages" :key="storage">
+               {{ storage }}
+            </p><br>
+
+            <div class="pic-icon-wrapper">
+               <div class="images first">
+                    <img src="@/assets/icons/html.png" alt="">
+               </div>
+               <div class="images second">
+                    <img src="@/assets/icons/javascript.svg" alt="">
+               </div>
+               <div class="images third">
+                    <img src="@/assets/icons/laravel.png" alt="">
+               </div>
+               <div class="images last">
+                    <img width="50" src="@/assets/icons/vue.svg" alt="">
+               </div>
              </div>
         </div>
         <div class="home-dash image-wrapper">
@@ -36,10 +57,7 @@
                   <img src="@/assets/portfolio-icons/test-image.png" alt="">
              </div>
         </div>
-    </div>
-    <div class="overlay"></div>
-    <div class="icons-wrapper">
-         <div class="images first"></div>
+       </div>    
     </div>
   </div>
 </template>
@@ -52,11 +70,26 @@ export default {
   data(){
     return{
         firstname:'Miracool',
-        stalk:'Full-stalk Developer',
+        stalk:'Full stack Developer',
         homeText:"let's talk about your project.",
-        language:'Javascript | php | python | Html | Css & Scss',
-        frameworks:'Vue || Nuxt || Node js || laravel',
-        storage:'Mysql | Nosql'
+        languages:{
+          Js:'Javascript',
+          php:'php',
+          py: 'python',
+          html:'Html',
+          css:'Css',
+          scss:'Scss',
+        },
+        frameworks:{
+          vue:'Vue',
+          veut:'veutify',
+          nuxt: 'Nuxt',
+          node: 'node js',
+        },
+        storages:{
+          sql: 'Mysql',
+          nosql: 'mongodb'
+        },
     }
   }
 }
@@ -72,29 +105,80 @@ export default {
         color: #eee;
     }
 
+    .frame-style{
+         display: inline-flex;
+         margin: 2px 2px ;
+         padding: 4px 4px ;
+         border: 2px solid #e74e3c;
+         box-shadow: 0px 2px 5px rgba(56, 55, 55, 0.3) , 0px 2px 7px 5px rgba(56, 55, 55, 0.2);
+         border-radius: 15px;
+         margin-top: 10px;
+    }
+
+    .lang-style{
+         display: inline-flex;
+         margin: 2px 2px ;
+         padding: 4px 4px ;
+         border: 2px solid green;
+         box-shadow: 0px 2px 5px rgba(56, 55, 55, 0.3) , 0px 2px 7px 5px rgba(56, 55, 55, 0.2);
+         border-radius: 15px;
+         margin-top: 10px;
+     }
+    .store-style{
+         display: inline-flex;
+         margin: 2px 2px ;
+         padding: 4px 4px ;
+         border: 2px solid blue;
+         box-shadow: 0px 2px 5px rgba(56, 55, 55, 0.3) , 0px 2px 7px 5px rgba(56, 55, 55, 0.2);
+         border-radius: 15px;
+         margin-top: 10px;
+    }
+
   .container{
+      @media (min-width:768px){            
+          background:  #156373;
+          height: 600px ;
+      } 
+      height: 100%;
       background:  #156373;
 
       //position: relative;
       .contain{
-          position: relative; 
-          display: flex;
-          flex-direction: column-reverse ;
-          width: 90%;
-          margin: 0px auto;
-          padding: 30px 2px;
           @media (min-width:768px) {
-               flex-direction: row;
-               justify-content: center;
+             position: absolute;
+             top: 0px;
+             display: flex;
+             width: 100%;
+             height: 600px ;
+          } 
+          display: flex;
+          height: 100%;
+          padding: 30px 2px ;
+          
+          .main-wrapper{
+              @media (min-width:768px){   
+                 display: flex;    
+                 flex-direction: row ;
+                 align-items: center;
+                 justify-content: space-between ;
+                 height: 600px ;
+                 width: 80% ;  
+                 margin: 0px auto ;
+              }  
+               display: flex ;
+               flex-direction: column-reverse;
                align-items: center;
-               height: 500px;
-               width: 80%;
-          }  
-          .home-dash{
-               padding: 40px 4px;
-               margin: 0px auto ;
-               
+               height: 100%; 
+               margin: -0px auto;
+            }
 
+          .home-dash{
+               padding: 40px 20px;
+
+               @media (max-width: 768px){
+                    padding: 5px 20px;
+               }
+               
                @media (max-width: 320px){
                     width: 100%;
                }
@@ -104,7 +188,7 @@ export default {
                         font-family: 'Roboto Mono', monospace ;
                         color: #eee;
                         font-weight: 600;
-                        font-size: 60px;
+                        font-size: 45px;
 
                         span{
                              font-size: 20px;
@@ -125,11 +209,11 @@ export default {
                          max-width: 180px;
                          border-radius: 5px;
                          text-align: center;
-                         font-size: 17px;
+                         font-size: 15px;
                     }
 
                     div{
-                        font-size: 28px;
+                        font-size: 20px;
                         color: #eee;
                         font-weight: 600;
 
@@ -207,11 +291,12 @@ export default {
 
 
                @media (max-width:450px) {
-                    max-width: 300px;
+                    height: 250px ;
+                    max-width: 250px;
                }
                
                @media (max-width: 320px){
-                     max-width: 300px;
+                     max-width: 250px;
                }
 
                @media (max-width: 280px){
@@ -230,7 +315,7 @@ export default {
           &.first{
                width: 400px;
                height: 400px;
-               opacity: .1;
+               opacity: 2;
                transform: translateY(-250px) translateX(-250px);
 
                img{
@@ -240,17 +325,51 @@ export default {
       }
 
       .overlay{
-           width: 100%;
-           height: 500px;
+           @media (min-width:768px){
+              width: 100%;
+              height: 600px ;
+              position: absolute;
+              top: 0px;
+           }
+           width: 100% ;
+           height: 100% ;
+           position: absolute ;
+           top: 0px;
+      }
+
+      .move-bar{
+           @media (min-width:768px){
+              width: 20%;
+              height: 600px ;
+              position: absolute;
+              background: #000;
+              opacity: .1;
+              box-shadow: 0px 2px 5px rgba(56, 55, 55, 0.3) , 0px 2px 7px 5px rgba(56, 55, 55, 0.2);
+              top: 0px;
+           }
+           width: 20%;
+           height: 100%;
+           background: #000;
+           opacity: .1;
            position: absolute;
            top: 0px;
       }
 
       .icons-wrapper{
+          @media (min-width:768px){ 
+             width: 100%;
+             height: 600px;
+             position: absolute;
+             top: 0px;
+             background: #000;
+             opacity: .4;
+          }
           width: 100%;
-          height: 550px;
+          height: 100%;
           position: absolute;
           top: 0px;
+          background: #000;
+          opacity: .2;
       }
   }
 </style>

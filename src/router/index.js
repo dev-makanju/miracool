@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const Home = () => import('../views/Home.vue');
 const Contact = () => import('../views/Contact.vue');
 const About = () => import('../views/About.vue');
+import Notfound from "../views/error.vue"
 
 const routes = [
   {
@@ -27,7 +28,15 @@ const routes = [
     meta:{
       title:'About'
     }
-  },  
+  }, 
+  {
+    path: '/:catchAll(.*)*',
+    name: 'error',
+    component: Notfound,
+    meta:{
+        title:'404-notfound'
+    }
+  }, 
 ]
 
 const router = createRouter({

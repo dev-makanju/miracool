@@ -14,7 +14,7 @@
                         {{ project.stalk }}
                     </span>
                     <div class="view-product">
-                        <a target="__blank" to="[project.link]" class="links">Go to site</a>
+                        <a  :href="[project.link]" target="__blank" class="links">Go to site</a>
                     </div>
                  </div>
             </div>

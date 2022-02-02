@@ -132,9 +132,9 @@
 <style lang="scss" scoped>
 
 header{
-    position: relative;
     background:#156373;
     width: 100%;
+
 
     .nav-1{
          width: 90% ;    

@@ -1,14 +1,15 @@
 <template>
-        <div class="landing_page">
-             <Landingpage/>
-        </div>
-        <div class="project-wrapper">
-             <Projects/>
-        </div>
-        <div class="overview flex">
-             <h1 style="color:green;"># <span style="color:#eee">Projects</span></h1>
-            <Overview :project="project" v-for="(project , index) in projects" :key="index" />
-        </div>
+     <div class="landing_page">
+          <Landingpage/>
+          <socials />
+     </div>
+     <div class="project-wrapper">
+          <Projects/>
+     </div>
+     <div class="overview flex">
+          <h1 style="color:green;"># <span style="color:#eee">Projects</span></h1>
+          <Overview :project="project" v-for="(project , index) in projects" :key="index" />
+     </div>
 </template>
 
 <script>
@@ -17,11 +18,12 @@
 import Landingpage from '../components/Landingpage.vue'
 import Projects from '../components/Projects.vue'
 import Overview from '../components/Overview.vue'
+import socials from '../components/social.vue'
 
 export default {
   name:'Home',
      components:{
-          Landingpage , Projects , Overview
+          Landingpage , Projects , Overview , socials
      },
      data(){
           return{
@@ -31,13 +33,14 @@ export default {
                          ProjectDesc:'Triangu is a personal blog that was built for dev development and also to keep writing about my love for technological advancement.',
                          photoName:'Triangu', 
                          stalk:'Vue | Nuxt | Node | express | mongo ',
-                         link:"http://Triangu.ml"
+                         link:"https://Triangu.ml"
                     },
                     {
-                         projectName:'Vanilla',
-                         ProjectDesc:'vanilla is web app build for transaction base purposes,and also used for product management',
+                         projectName:'Task manager',
+                         ProjectDesc:'This app helps all its users to magnage thier daily todos , all you have to do is create account and visit your dashboard to get started',
                          photoName:'Triangu',
-                         stalk:'Vue | Node | express | mongo | veutify'
+                         stalk:'Vue | Node | express | mongo ',
+                         link:"https://task-manager-a.netlify.app"
                     },
                     {
                          projectName:'Vanilla',
@@ -53,7 +56,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
      .project-wrapper{
           background:  #0b3b44 ;
           background-image: linear-gradient( 45deg , #092f36 25% , transparent 25% ,
