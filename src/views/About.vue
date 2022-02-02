@@ -22,33 +22,16 @@
                       <div class="interest_tabs">
                       <h4>my personal interests include:</h4>
                       <ul>
-                          <li><span></span>
-                          <p>
-
-                               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <li>
+                           <p>
+                               {{   }}
                            </p>
-                          </li>
-                          <li><span></span>
-                          <p>
-                               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                           </li>
+                           <li><span></span>
+                           <p>
+                               mountain hiking
                            </p>
-                          </li>
-                      </ul>
-                  </div>
-
-                  <div class="interest_tabs">
-                      <h2>Skills</h2>
-                      <ul>
-                          <li><span>Tools</span>
-                               <p>Vue js</p>
-                               <p>Node js</p>
-                               <p>Express</p>
-                          </li>
-                          <li><span>Storage</span>
-                               <p>Vue js</p>
-                               <p>Node js</p>
-                               <p>Express</p>
-                          </li>
+                        </li>
                       </ul>
                   </div>
                   </div>
@@ -64,11 +47,12 @@
                 about:{
                     sureName:'Makanju',
                     firstName:'oluwafemi',
-                    About:'Integer bibendum, massa nec venenatis pretium, arcu libero malesuada felis, eget sagittis lorem leo ut metus. Duis finibus sodales massa vel aliquet. Ut ante arcu, euismod sit amet volutpat eleifend, semper ultrices velit. Ut et rhoncus lacus. Mauris gravida tortor sit amet elit fringilla, nec condimentum elit venenatis. Aliquam eleifend bibendum elit et fringilla. Maecenas dolor tortor, commodo sit amet commodo a, ornare vel ex.Donec sit amet placerat libero. Duis nec erat ultricies, aliquam odio bibendum, luctus velit. Vestibulum tincidunt libero nunc, non elementum lorem tempor non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed non pellentesque erat. Quisque in urna sed ipsum rutrum venenatis et at velit. Donec at augue lectus.Ut fringilla gravida pharetra. Mauris ultrices nisi vel commodo condimentum. Integer dignissim congue leo, eget porttitor mi sagittis sed. Maecenas tincidunt tortor tincidunt lacus rhoncus sagittis. Morbi sagittis efficitur quam vel cursus. Duis suscipit non nulla quis malesuada. Proin dapibus mattis est sit amet efficitur. Vivamus consequat nec nisl nec pellentesque. Fusce aliquet est diam, at sodales neque vulputate eget. Sed facilisis urna non maximus efficitur. Donec congue est non sem malesuada sagittis. Nulla malesuada libero lectus, id elementum magna condimentum in. Fusce imperdie',   
+                    About:
+                     'Hi there , my name is Makanju Oluwafemi Emmanuel ', 
                 },
                 hightlight:[
                     {
-                        info:'non aliquam nisl metus vel justo.Aenean sapien dolor, tempor ut efficitur ac, porta sit amet urna. Mauris tincidunt ligula sit amet enim scelerisque, eget ullamcorper nulla cursus. Aliq',
+                        info:' the ',
                     },
                     {
                         info:'non aliquam nisl metus vel justo.Aenean sapien dolor, tempor ut efficitur ac, porta sit amet urna. Mauris tincidunt ligula sit amet enim scelerisque, eget ullamcorper nulla cursus. Aliq',
