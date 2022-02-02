@@ -135,7 +135,6 @@ header{
     background:#156373;
     width: 100%;
 
-
     .nav-1{
          width: 90% ;    
          margin: 0px auto ;
@@ -350,8 +349,6 @@ header{
     justify-content: center ;
     flex-direction: column ;
     align-items: flex-end;
-    column-gap: 4px;
-    gap: 4px;
     z-index: 111;
 
 
@@ -364,6 +361,7 @@ header{
         height: 4px;
         border: 3px solid #eeee;
         border-radius: 3px;
+        margin: 2px ;
         transition: all .3s ease;
         box-shadow: 0px 2px 5px rgba(56, 55, 55, 0.3) , 0px 2px 7px 5px rgba(56, 55, 55, 0.2);
 

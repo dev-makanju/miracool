@@ -292,6 +292,9 @@ export default {
                width: 250px;
                height: 300px;
 
+               img{
+                   object-fit: cover;
+               }
 
                @media (max-width:450px) {
                     height: 250px ;
