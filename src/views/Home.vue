@@ -38,7 +38,7 @@ export default {
                     {
                          projectName:'Task manager',
                          ProjectDesc:'This app helps all its users to magnage thier daily todos , all you have to do is create account and visit your dashboard to get started',
-                         photoName:'Triangu',
+                         photoName:'tasks',
                          stalk:'Vue.js', 
                          link:"https://task-manager-a.netlify.app"
                     },

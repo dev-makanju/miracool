@@ -11,8 +11,8 @@ const animatedScrollObserver = new IntersectionObserver(
 
 
 export default{
-     beforeMount(el){
-         el.classList.add("before-enter");
-         animatedScrollObserver.observe(el);
-     }
+    beforeMount(el){
+        el.classList.add("before-enter");
+        animatedScrollObserver.observe(el);
+    }
 }

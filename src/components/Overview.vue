@@ -1,7 +1,7 @@
 <template>
-        <div class="project-overview" id="sec-project">
+        <div v-scrollanimation class="project-overview" id="sec-project">
             <div class="content-wrapper product">
-                    <img v-scrollanimation  v-lazy="require(`@/assets/portfolio-icons/${project.photoName}.png`)" alt="">
+                <img v-scrollanimation  v-lazy="require(`@/assets/portfolio-icons/${project.photoName}.png`)" alt="">
             </div>
             <div class="content-wrapper product">
                 <div class="description">
@@ -38,8 +38,18 @@
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
-    transition: .5s ease;
+    transition: 2s ease;
     box-shadow: 0px 2px 5px 5px rgba(0 , 0 , 0 , .3);
+
+    &.before-enter{
+        opacity: 0 ;
+    }
+
+    &.enter{
+        transform: scale(1) ;
+        opacity: 1 ;
+    }
+    
 
     &:hover{
         transform: scale(1.001) rotateZ(1.01deg);

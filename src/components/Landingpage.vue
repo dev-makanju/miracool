@@ -1,11 +1,11 @@
 <template>
   <div class="container">
      <!--container-overlay-->
-     <div class="icons-wrapper">
+     <div v-scrollanimation class="icons-wrapper">
         <div class="images first"></div>
      </div>
      <div class="overlay"></div>
-     <div class="move-bar"></div>
+     <div v-scrollanimation class="move-bar"></div>
      <!---background overlay--->
      <!---top layer-->
      <div class="contain">
@@ -97,10 +97,11 @@ export default {
 
 
 <style lang="scss" scoped>
-   .skil-main{
+
+     .skil-main{
          color: #fff;
          margin-top: 2rem;
-    }
+     }
     .skil-tags{
         color: #eee;
     }
@@ -138,9 +139,11 @@ export default {
       @media (min-width:768px){            
           background:  #156373;
           height: 600px ;
+          overflow: hidden ;
       } 
       height: 100%;
       background:  #156373;
+      overflow: hidden ;
 
       //position: relative;
       .contain{
@@ -339,20 +342,50 @@ export default {
 
       .move-bar{
            @media (min-width:768px){
-              width: 20%;
+              width: 10%;
               height: 600px ;
               position: absolute;
               background: #000;
-              opacity: .1;
               box-shadow: 0px 2px 5px rgba(56, 55, 55, 0.3) , 0px 2px 7px 5px rgba(56, 55, 55, 0.2);
-              top: 0px;
+              top: 0px ;
+              transition: .9s ease ;
+
+              &.before-enter{
+                 opacity: 0 ;
+                 transform: translateX(-20px );
+              }
+
+               &.enter{
+                 opacity: .5 ;
+                 transform: translateX(1800px);
+               }
+              
            }
-           width: 20%;
-           height: 100%;
+           width: 20% ;
+           height: 600px ;
            background: #000;
            opacity: .1;
            position: absolute;
            top: 0px;
+           transition: 2s ease ;
+
+          &.before-enter{
+              opacity: 0 ;
+              transform: translateX(-20px );
+          }
+          &.enter{
+              opacity: .5 ;
+              transform: translateX(1800px);
+          }
+
+           &.before-enter{
+               opacity: 0 ;
+           }
+
+           &.enter{
+
+               opacity: .5 ;
+           }
       }
 
       .icons-wrapper{
@@ -361,15 +394,33 @@ export default {
              height: 600px;
              position: absolute;
              top: 0px;
-             background: #000;
-             opacity: .4;
+             background: #000 ;
+             transition:all .5s ease;
+
+          &.before-enter{
+               opacity: 0 ;
+          }
+
+          &.enter{
+            transform: scale(1) ;
+            opacity: .4 ;
+          }
           }
           width: 100%;
           height: 100%;
           position: absolute;
           top: 0px;
           background: #000;
-          opacity: .2;
+          transition:all .5s ease;
+
+          &.before-enter{
+               opacity: 0 ;
+          }
+
+          &.enter{
+            transform: scale(1) ;
+            opacity: .2 ;
+          }
       }
   }
 </style>
