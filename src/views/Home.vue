@@ -55,13 +55,12 @@ export default {
           transparent 75% , #092f36 75% , #092f36 ), 
           linear-gradient( -45deg , #092f36 25% , transparent 25% ,
           transparent 75% , #092f36 75% , #092f36 );
-          padding: 40px 0px;
      }
 
      .overview{
           padding:  40px 0px;
           background:  #0b3b44 ;
-          gap: 2em ;
+          gap: 30px ;
           flex-direction: column;
           justify-content: center ;
           align-items: center;

@@ -31,15 +31,16 @@
 <style lang="scss" scoped>
 
 .project-overview{
-    display: flex;
-    background: #398291;
-    width: 90%;
-    max-width: 800px;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-    transition: 2s ease;
+    display: flex ;
+    background: #398291 ;
+    width: 90% ;
+    max-width: 800px ;
+    flex-direction: column ;
+    align-items: center ;
+    border-radius: 20px ;
+    transition: 2s ease ;
     box-shadow: 0px 2px 5px 5px rgba(0 , 0 , 0 , .3);
+    margin: 20px ;
 
     &.before-enter{
         opacity: 0 ;
@@ -50,7 +51,6 @@
         opacity: 1 ;
     }
     
-
     &:hover{
         transform: scale(1.001) rotateZ(1.01deg);
     }
@@ -69,7 +69,7 @@
     overflow: hidden;
 
     @media( min-width: 600px){
-        flex: 1;
+        flex: 1 ;
     }
 
     &.product{
