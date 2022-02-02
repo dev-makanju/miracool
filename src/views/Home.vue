@@ -32,21 +32,21 @@ export default {
                          projectName:'Triangu',
                          ProjectDesc:'Triangu is a personal blog that was built for dev development and also to keep writing about my love for technological advancement.',
                          photoName:'Triangu', 
-                         stalk:'Vue | Nuxt | Node | express | mongo ',
+                         stalk:'Vue.js | firebase',
                          link:"https://Triangu.ml"
                     },
                     {
                          projectName:'Task manager',
                          ProjectDesc:'This app helps all its users to magnage thier daily todos , all you have to do is create account and visit your dashboard to get started',
                          photoName:'Triangu',
-                         stalk:'Vue | Node | express | mongo ',
+                         stalk:'Vue.js', 
                          link:"https://task-manager-a.netlify.app"
                     },
                     {
                          projectName:'Vanilla',
                          ProjectDesc:'vanilla is web app build for transaction base purposes,and also used for product management',
                          photoName:'Triangu',
-                         stalk:'Vue | Node | express | mongo | veutify'
+                         stalk:'Vue | Node | express | mongo | veutify',
                     },
                ]
           }

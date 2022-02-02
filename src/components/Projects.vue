@@ -15,8 +15,9 @@
                                         <li><font-awesome-icon :icon="['fas' , 'pencil-alt']"/></li>
                                   </ul>
                                   <div class="content-wrapper">
-                                        <div class="text-content flex">
+                                        <div class="text-content position">
                                             <h3>{{ this.text }}</h3>
+                                            <div class="overlay-anime"></div>
                                         </div>
                                   </div>
                             </div>
@@ -49,6 +50,9 @@
                                         <div class="button"></div>
                                       </div>
                                   </ul>
+                                  <div class="inner-text">
+                                        <img class="code-image" src="@/assets/portfolio-icons/code-image.png" alt="">
+                                  </div>
                                </div>
                            </div> 
                     </div>
@@ -70,6 +74,17 @@
 </script>
 
 <style lang="scss" scoped>
+
+.code-image{
+    object-fit: cover ;
+    width: 100%;
+    height: 250px;
+}
+
+.position{
+    position: relative;
+}
+
 
 .objectives{
 
