@@ -54,7 +54,7 @@
         </div>
         <div class="home-dash image-wrapper">
              <div class="home-dash__image">
-                  <img src="@/assets/portfolio-icons/test-image.png" alt="">
+                  <img v-lazy="require(`@/assets/portfolio-icons/test-image.png`)" alt="">
              </div>
         </div>
        </div>    

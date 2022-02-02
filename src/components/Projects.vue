@@ -36,7 +36,7 @@
                                    
                                 </div>
                                 <div class="center__landing_page page flex image-pix">
-                                       <img class="hand" src="@/assets/portfolio-icons/Femfinger.png" alt="">                                    
+                                       <img class="hand" v-lazy="require(`@/assets/portfolio-icons/Femfinger.png`)" alt="">                                    
                                 </div>
                             </div>
                        </div>
@@ -51,7 +51,7 @@
                                       </div>
                                   </ul>
                                   <div class="inner-text">
-                                        <img class="code-image" src="@/assets/portfolio-icons/code-image.png" alt="">
+                                        <img class="code-image" v-lazy="require(`@/assets/portfolio-icons/code-image.png`)" alt="">
                                   </div>
                                </div>
                            </div> 
