@@ -13,7 +13,7 @@
             <div class="home-dash">
             <div class="home-dash__text-wrapper">
                  <h4>{{ this.stalk }}</h4>
-                 <h1 class="animate__animated animate__zoomInLeft">{{ this.firstname}}</h1>
+                 <h1 class="animate__animated animate__zoomInLeft">{{ this.firstname }}</h1>
             </div>
             <div class="home-dash__text-wrapper">
                  <div>{{ this.homeText }}</div>
@@ -289,7 +289,7 @@ export default {
                display: flex;
                justify-content: center;
                padding: 10px 10px 0 0;
-               width: object-fit;
+               width: 250px;
                height: 300px;
 
 

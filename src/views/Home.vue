@@ -42,12 +42,6 @@ export default {
                          stalk:'Vue.js', 
                          link:"https://task-manager-a.netlify.app"
                     },
-                    {
-                         projectName:'Vanilla',
-                         ProjectDesc:'vanilla is web app build for transaction base purposes,and also used for product management',
-                         photoName:'Triangu',
-                         stalk:'Vue | Node | express | mongo | veutify',
-                    },
                ]
           }
      },

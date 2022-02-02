@@ -1,9 +1,9 @@
 <template>
-            <div class="objectives__goals txt">
-                  <h1>{{ this.goal }}</h1>
-                  <p>Bring your imagination to life...</p>
-            </div> 
-            <div class="objectives__goals flex">
+        <div class="objectives__goals txt">
+                <h1>{{ this.goal }}</h1>
+                <p>Bring your imagination to life...</p>
+        </div> 
+        <div class="objectives__goals flex">
                         <div class="objectives__goals aim">
                            <div class="objectives__goals wrapper">
                                   <ul class="header__icon">
