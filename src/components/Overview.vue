@@ -6,7 +6,11 @@
             <div class="content-wrapper product">
                 <div class="description">
                     <h1>
-                        <span style="color: rgb(39, 75, 10)">#</span><span style="color:#eee">{{ project.projectName }}</span>
+                        <span style="color: rgb(39, 75, 10)"> 
+                            <a class="link__hub" :href="[project.github]" target="__blank">
+                                    <font-awesome-icon :icon="['fab' , 'github']"/>
+                            </a>&nbsp;&nbsp;
+                             </span><span style="color:#eee">{{ project.projectName }}</span>
                     </h1>
                     <p>{{ project.ProjectDesc }}</p>
                     <span style="font-weight; 600;">Technology used</span><br>
@@ -29,6 +33,10 @@
 </script>
 
 <style lang="scss" scoped>
+
+.link__hub{
+    color: #0E1A1F;
+}
 
 .project-overview{
     display: flex ;
