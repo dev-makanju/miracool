@@ -55,6 +55,8 @@ body{
     margin: 0px ;
     padding: 0px ;
     overflow-x: hidden ;
+    height: 100% ; 
+    width: 100% ;
 }
 
 .main-container{
