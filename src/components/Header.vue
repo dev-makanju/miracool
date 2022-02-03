@@ -1,6 +1,6 @@
-    <template>
+<template>
     <header>
-         <div class="nav-1">
+        <div class="nav-1">
                <div class="nav-2 titles">
                     <img src="@/assets/portfolio-icons/miracool-logo-removebg-preview.png" width="80" alt="">
                </div>

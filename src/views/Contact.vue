@@ -111,6 +111,7 @@
     flex-direction: column-reverse ;
     align-items: center;    
     margin-bottom: 4em ;
+    height: 100vh;
 
     @media (min-width:800px){
         flex-direction: row;

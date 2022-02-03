@@ -18,17 +18,6 @@
      components:{
           Header,Footer
      },
-     data(){
-        return{
-            
-        }
-     },
-     created(){
-
-     },
-     methods:{
-        
-     }
   }
 </script>
 
@@ -52,23 +41,18 @@ html{
 }
 
 body{
-    margin: 0px ;
-    padding: 0px ;
     overflow-x: hidden ;
-    height: 100% ; 
-    width: 100% ;
 }
-
-.main-container{
-  min-height: 100vh;
-}
-
 
 #app {
    display: flex;
    flex-direction: column;
    min-height: 100vh;
    position: relative;
+}
+
+.main-container{
+   height: 100%;
 }
 
 .flex{
@@ -101,6 +85,5 @@ body{
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
     background:#15687a;
 } 
-
 
 </style>

@@ -9,32 +9,13 @@
                           <p>{{ about.About}}</p>
                     </div>
                     <div class="about_container__tabs_wrapper__content">
-                        <h2>Highlights</h2>
+                        <h2>Interests</h2>
+                        <h4>i'm intrested in:</h4>
                         <ul v-for="(list , index) in hightlight  " :key="index">
                             <li>{{list.info}}</li>
                         </ul>
                     </div>
                 </div>
-            </div>
-                  <h2>INTEREST</h2>
-            <div class="about_container__tabs flex">
-                  <div class="inter">
-                      <div class="interest_tabs">
-                      <h4>my personal interests include:</h4>
-                      <ul>
-                        <li>
-                           <p>
-                               {{   }}
-                           </p>
-                           </li>
-                           <li><span></span>
-                           <p>
-                               mountain hiking
-                           </p>
-                        </li>
-                      </ul>
-                  </div>
-                  </div>
             </div>
     </div>
 </template>
@@ -48,17 +29,17 @@
                     sureName:'Makanju',
                     firstName:'oluwafemi',
                     About:
-                     'Hi there , my name is Makanju Oluwafemi Emmanuel ', 
+                     "Hi there , my name is Makanju Oluwafemi Emmanuel , a computer science undergraduate at Obafemi Awolowo university ile-ife Nigeria. I like to resolve design problems, create smart user interface and imagine useful interaction, developing rich web experiences & web applications. I am always intrested in leaning new technology , capacity-building and also paying attention to details.",
                 },
                 hightlight:[
                     {
-                        info:' the ',
+                        info:'Mountain hiking',
                     },
                     {
-                        info:'non aliquam nisl metus vel justo.Aenean sapien dolor, tempor ut efficitur ac, porta sit amet urna. Mauris tincidunt ligula sit amet enim scelerisque, eget ullamcorper nulla cursus. Aliq',
+                        info:'music',
                     },
                     {
-                        info:'non aliquam nisl metus vel justo.Aenean sapien dolor, tempor ut efficitur ac, porta sit amet urna. Mauris tincidunt ligula sit amet enim scelerisque, eget ullamcorper nulla cursus. Aliq',
+                        info:'entrepreneurship',
                     }
                 ]
 
@@ -72,6 +53,7 @@
     width: 90%;
     margin: auto;
     flex-direction: column;
+    height: 100vh;
 
     @media (min-width:600px){
         width: 80%;

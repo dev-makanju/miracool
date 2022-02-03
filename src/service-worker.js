@@ -29,6 +29,7 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
 const expectedCaches = [];
 self.addEventListener("activate", (event) => {
   event.waitUntil(
