@@ -50,7 +50,7 @@ html{
 .main-container{
    height: 100%;
    overflow-x: hidden ;
-   position: relative git ;
+   position: relative ;
 }
 
 .flex{
