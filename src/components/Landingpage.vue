@@ -298,7 +298,6 @@ export default {
                     max-width: 250px ;
 
                     img{
-                       object-fit: cover; 
                        height: 230px;
                        max-width: 240px;
                     }
@@ -308,7 +307,6 @@ export default {
                     max-width: 250px;
 
                     img{
-                       object-fit: cover; 
                        height: 230px;
                        max-width: 230px;
                     }
@@ -318,7 +316,6 @@ export default {
                     max-width: 260px;
 
                     img{
-                       object-fit: cover; 
                        max-width: 250px;
                     }
                }
