@@ -127,12 +127,13 @@
             animation: zoom-in-out 4s ease-in-out infinite alternate;
 
             img{
-                @media (max-width:450px) {
-                    width: 100px;
-                }
 
                 @media (max-width:800px) {
                     width: 200px;
+                }
+
+                @media (max-width:450px) {
+                    width: 100px;
                 }
             }
         }
@@ -155,7 +156,12 @@
 
 
 .form-wrapper{
-    width: 90%;
+
+    @media (min-width: 800px) {
+        width: 90%;
+    }
+
+    width: 100%;
     max-width: 500px;
     background: #eee ;
     margin: 0px auto;
@@ -166,10 +172,6 @@
     padding: 40px 30px;
     box-shadow: 0px 2px 5px rgba(0 , 0 , 0 , .3);
 
-
-    @media (min-width: 800px) {
-        width: 90%;
-    }
 
     .send-messages{
         flex-direction: column ;
