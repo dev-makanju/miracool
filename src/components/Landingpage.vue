@@ -292,21 +292,35 @@ export default {
                width: 250px;
                height: 300px;
 
-               img{
-                   object-fit: cover;
-               }
 
                @media (max-width:450px) {
                     height: 250px ;
-                    max-width: 250px;
+                    max-width: 250px ;
+
+                    img{
+                       object-fit: cover; 
+                       height: 230px;
+                       max-width: 240px;
+                    }
                }
                
                @media (max-width: 320px){
-                     max-width: 250px;
+                    max-width: 250px;
+
+                    img{
+                       object-fit: cover; 
+                       height: 230px;
+                       max-width: 230px;
+                    }
                }
 
                @media (max-width: 280px){
-                     max-width: 260px;
+                    max-width: 260px;
+
+                    img{
+                       object-fit: cover; 
+                       max-width: 250px;
+                    }
                }
           }
       }
