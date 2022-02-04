@@ -1,11 +1,13 @@
 <template>
      <div class="landing_page">
-            <Landingpage/>
+          <Landingpage />
           <socials />
      </div>
+
      <div class="project-wrapper">
           <Projects/>
      </div>
+
      <div class="overview flex">
           <h1 style="color:green;"># <span style="color:#eee">Projects</span></h1>
              <Overview :project="project" v-for="(project , index) in projects" :key="index" />

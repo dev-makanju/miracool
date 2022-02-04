@@ -40,19 +40,17 @@ html{
   min-height: 100vh;
 }
 
-body{
-    overflow-x: hidden ;
-}
-
 #app {
-   display: flex;
-   flex-direction: column;
-   min-height: 100vh;
-   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
 }
 
 .main-container{
    height: 100%;
+   overflow-x: hidden ;
+   position: relative git ;
 }
 
 .flex{

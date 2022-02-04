@@ -136,10 +136,9 @@ export default {
     }
 
   .container{
-      @media (min-width:768px){            
+      @media (min-width:768px) {            
           background:  #156373;
           height: 600px ;
-          overflow: hidden ;
       } 
       height: 100%;
       background:  #156373;
