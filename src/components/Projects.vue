@@ -166,6 +166,8 @@
                 box-shadow: 0 0 5px 10px hsl(129, 30%, 54% , .3),0 0 5px 15px hsl(92, 82%, 22% , .3);
                 justify-content: center;
                 align-items: center;
+                z-index: 2 ;
+                cursor: pointer ;
                 
                 
 

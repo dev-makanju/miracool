@@ -138,7 +138,7 @@ export default {
   .container{
       @media (min-width:768px) {            
           background:  #156373;
-          height: 600px ;
+          height: 600px;
       } 
       height: 100%;
       background:  #156373;
@@ -348,7 +348,7 @@ export default {
               top: 0px;
            }
            width: 100% ;
-           height: 100% ;
+           height: 600px ;
            position: absolute ;
            top: 0px;
       }
@@ -418,9 +418,10 @@ export default {
             transform: scale(1) ;
             opacity: .4 ;
           }
+
           }
           width: 100%;
-          height: 100%;
+          height: 600px;
           position: absolute;
           top: 0px;
           background: #000;
