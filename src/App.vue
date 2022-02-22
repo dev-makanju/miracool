@@ -36,11 +36,11 @@
   font-family: "Quicksand", sans-serif;
 }
 
-html{
+htm{
   min-height: 100vh;
 }
 
-#app {
+#app{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -51,6 +51,8 @@ html{
    height: 100%;
    overflow-x: hidden ;
    position: relative ;
+   max-width: 1440px;
+   margin: 0 auto ;
 }
 
 .flex{
@@ -60,6 +62,8 @@ html{
 .footer-main{
      background:  #071013;
      padding: 40px 0px;
+     max-width: 1440px;
+     margin: 0px auto;
 }
 
 .tar_link{

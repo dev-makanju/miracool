@@ -83,10 +83,11 @@
     flex-direction: column;
     padding: 50px 10px;
     color: #eee;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: 400 ;
+    font-size: 12px ;
     letter-spacing: .5px;
+    max-width: 1440px;
 
 
     @media (min-width:700px){

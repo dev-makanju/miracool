@@ -2,7 +2,10 @@
   <div class="container">
      <!--container-overlay-->
      <div v-scrollanimation class="icons-wrapper">
-        <div class="images first"></div>
+          <div class="images first"></div>
+     </div>
+     <div class="parent-body">
+         <BallOverlay/>
      </div>
      <div class="overlay"></div>
      <div v-scrollanimation class="move-bar"></div>
@@ -63,10 +66,16 @@
 </template>
 
 <script>
+
+import BallOverlay from '../components/OverlayBall.vue';
+
 // @ is an alias to /src
 
 export default {
   name:'Home',
+  components:{
+      BallOverlay
+  },
   data(){
     return{
         firstname:'Miracool',
@@ -437,4 +446,5 @@ export default {
           }
       }
   }
+
 </style>
