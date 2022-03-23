@@ -15,9 +15,9 @@
   import Header from './components/Header.vue'
   import Footer from './components/Footer.vue'
   export default {
-     components:{
+      components:{
           Header,Footer
-     },
+      },
   }
 </script>
 
@@ -36,7 +36,7 @@
   font-family: "Quicksand", sans-serif;
 }
 
-htm{
+html{
   min-height: 100vh;
 }
 

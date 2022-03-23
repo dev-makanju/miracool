@@ -10,7 +10,7 @@
 
      <div class="overview flex">
           <h1 style="color:green;"># <span style="color:#eee">Projects</span></h1>
-             <Overview :project="project" v-for="(project , index) in projects" :key="index" />
+          <Overview :project="project" v-for="(project , index) in projects" :key="index"/>
      </div>
 </template>
 
@@ -44,6 +44,14 @@ export default {
                          stalk:'Vue.js', 
                          link:"https://task-manager-a.netlify.app",
                          github:"https://github.com/dev-makanju/task-manager",
+                    },
+                    {
+                         projectName:'Gooble',
+                         ProjectDesc:'Gobble is a food delivery and ordering app , Features: cart system , checkout with modal pop up , landing page slider , sorting cart items... its built without a backend but function properly on the frontend.  ',
+                         photoName:'goble',
+                         stalk:'Vue.js', 
+                         link:"https://goble.netlify.app",
+                         github:"https://github.com/dev-makanju/Gobble",
                     },
                ]
           }
