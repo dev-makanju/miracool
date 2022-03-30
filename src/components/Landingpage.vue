@@ -22,20 +22,20 @@
                  <div>{{ this.homeText }}</div>
             </div>
 
-            <h3 class="skil-main">Skills</h3>
+            <h3 class="skil-main">Skill</h3>
 
-            <h4 class="skil-tags"><span style="color:green">#</span>programming language</h4>
+            <h4 class="skil-tags"><span style="color:green">#</span>Languages</h4>
             <!---languages-->
             <p class="lang-style" v-for="language in languages" :key="language">
                {{ language }}
             </p>
             <!--framework-->
-            <h4 class="skil-tags"><span style="color:green">#</span>framework</h4>
+            <h4 class="skil-tags"><span style="color:green">#</span>Framework</h4>
             <p class="frame-style" v-for="framework in frameworks" :key="framework">
                {{ framework }}
             </p>
             <!--storage-->
-            <h4 class="skil-tags"><span style="color:green">#</span>storage</h4>
+            <h4 class="skil-tags"><span style="color:green">#</span>Storage</h4>
             <p class="lang-style" v-for="storage in storages" :key="storage">
                {{ storage }}
             </p><br>
@@ -79,14 +79,14 @@ export default {
   data(){
     return{
         firstname:'Miracool',
-        stalk:'Full stack Developer',
+        stalk:'Software Developer',
         homeText:"let's talk about your project.",
         languages:{
           Js:'Javascript',
-          php:'php',
           py: 'python',
           html:'Html',
           css:'Css',
+          php:'tailwind',
           scss:'Scss',
         },
         frameworks:{

@@ -29,7 +29,7 @@
                     sureName:'Makanju',
                     firstName:'oluwafemi',
                     About:
-                     "Hi there , my name is Makanju Oluwafemi Emmanuel , a computer science undergraduate at Obafemi Awolowo university ile-ife Nigeria. I like to resolve design problems, create smart user interface and imagine useful interaction, developing rich web experiences & web applications. I am always intrested in leaning new technology , capacity-building and also paying attention to details.",
+                     "My name is Makanju Oluwafemi Emmanuel, a computer science undergraduate at Obafemi Awolowo University ile-ife Nigeria.  I’m an enthusiastic software developer and a technical writer, with a keen focus on making the web a better environment. I love to motivate myself to be consistent with learning and working smart   I like to resolve design problems, create smart user interface and imagine useful interaction, developing rich web experiences & web applications, I’m proficient in converting high quality designs to a functional and responsive front end code. In a dynamic environment, I work well with using effective communication skills to interact with other co-workers. At my leisure, I enjoy traveling and watching  football. ",
                 },
                 hightlight:[
                     {
@@ -86,11 +86,26 @@
             }
 
             &__content{
-                flex: 1;
                 padding: 20px 20px;
 
+                @media (max-width: 450px ) {
+                    padding: 20px 5px;
+                }
+
+                p{
+                    font-family: 'Montserrat', sans-serif ;
+                    font-weight: 300;
+                    line-height: 32px;
+                    word-spacing: 2px ;
+                    font-size: 17px;
+                }
+
                 ul li{
-                     padding: 7px 3px ;
+                    padding: 5px 3px ;
+                    font-family: 'Montserrat', sans-serif ;
+                    line-height: 32px;
+                    word-spacing: 2px ;
+                    font-size: 14px;
                 }
             }
 
