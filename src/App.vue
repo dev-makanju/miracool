@@ -49,10 +49,11 @@ html{
 
 .main-container{
    height: 100%;
+   min-height: 100vh;
    overflow-x: hidden ;
    position: relative ;
    max-width: 1440px;
-   margin: 0 auto ;
+   margin: 0 auto;
 }
 
 .flex{
