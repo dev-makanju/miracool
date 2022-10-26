@@ -30,12 +30,20 @@ export default {
           return{
                projects:[
                     {
-                         projectName:'Triangu',
-                         ProjectDesc:'Triangu is a personal blog that was built for dev development and also to keep writing about my love for technological advancement.',
-                         photoName:'Triangu', 
-                         stalk:'Vue.js | firebase',
-                         link:"https://Triangu.ml",
-                         github:"https://github.com/dev-makanju/Triangu",
+                         projectName:'Gooble',
+                         ProjectDesc:'Gobble is a food ordering app , Features: cart system , checkout with modal pop up , landing page slider , sorting cart items... its built with a node js backend also has an admin panel, with a paystack payment integration.',
+                         photoName:'goble',
+                         stalk:'Vue.js', 
+                         link:"https://goble.netlify.app",
+                         github:"https://github.com/dev-makanju/Gobble",
+                    },
+                    {
+                         projectName:'Exhnge',
+                         ProjectDesc:'Implementing a quality design comes with great vision and quality way of making a pixel perfect design.. This is why i worked on the web3 landing page design. paying close attention to design rules',
+                         photoName:'exhnge',
+                         stalk:'Vue.js , Tailwind', 
+                         link:"https://exhnge.netlify.app",
+                         github:"https://github.com/dev-makanju/Web_3_landing_page",
                     },
                     {
                          projectName:'Task manager',
@@ -46,12 +54,12 @@ export default {
                          github:"https://github.com/dev-makanju/task-manager",
                     },
                     {
-                         projectName:'Gooble',
-                         ProjectDesc:'Gobble is a food delivery and ordering app , Features: cart system , checkout with modal pop up , landing page slider , sorting cart items... its built without a backend but function properly on the frontend.  ',
-                         photoName:'goble',
-                         stalk:'Vue.js', 
-                         link:"https://goble.netlify.app",
-                         github:"https://github.com/dev-makanju/Gobble",
+                         projectName:'Triangu',
+                         ProjectDesc:'Triangu is a personal blog that was built for dev development and also to keep writing about my love for technological advancement.(outdated)',
+                         photoName:'Triangu', 
+                         stalk:'Vue.js | firebase',
+                         link:"https://Triangu.ml",
+                         github:"https://github.com/dev-makanju/Triangu",
                     },
                ]
           }
