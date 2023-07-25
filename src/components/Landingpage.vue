@@ -51,10 +51,19 @@ export default {
       color: rgba(238, 238, 238, 0.9333333333);
       font-size: 40px;
       font-weight: bolder;
+      
+      @media (max-width: 450px) {
+        font-size: 25px;
+      }
+
     }
 
     p {
       color: #4dd6f5da;
+
+      @media (max-width: 450px) {
+        font-size: 16px;
+      }
     }
   }
   .background-image img{
@@ -86,6 +95,11 @@ export default {
               padding: 10px 10px 0 0;
               width: 200px;
               height: 200px;
+
+              @media (max-width: 450px) {
+                width: 150px;
+                height: 150px;
+              }
 
           }
       }

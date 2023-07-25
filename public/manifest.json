@@ -3,7 +3,7 @@
     "short_name": "Miracool",
     "name": "personal portfolio",
     "start_url": "/",
-    "background_color": "#7d7878",
+    "background_color": "#4dd6f5da",
     "display": "standalone",
     "scope": "/",
     "theme_color": "#1FAA59",
