@@ -132,7 +132,7 @@
 <style lang="scss" scoped>
 
 header{
-    background:#156373;
+    background:#4dd6f5da;
     width: 100%;
 
     .nav-1{
@@ -185,7 +185,8 @@ header{
 
             .links{
                 text-decoration: none;
-                color: #eee;
+                color: #156373;
+                font-weight: bold;
 
                 &:hover{
                     color:#0c2f36;
@@ -207,7 +208,7 @@ header{
                 flex: 1;
                 box-shadow: 0px 0px .2px .1px rgba(110, 108, 108, 0.3) ;
                 height: 100vh;
-                background-color: #071013;
+                background: #4dd6f5;
             }
         }
 

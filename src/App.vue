@@ -23,17 +23,15 @@
 
 <style lang="scss">
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');//@font-name:'Montserrat', sans-serif
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display:ital,wght@1,400;1,500&display=swap');//@font-family: 'Playfair Display', serif;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display:ital,wght@1,400;1,500&family=Roboto+Mono:wght@500&display=swap');//font-family: 'Roboto Mono', monospace;
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@600&family=Playfair+Display:ital,wght@1,400;1,500&family=Roboto+Mono:wght@500&display=swap');//font-family: 'Abril Fatface', cursive;
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Plus+Jakarta+Sans&family=Roboto&display=swap');
+
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Open Sans', sans-serif;
+
 }
 
 html{

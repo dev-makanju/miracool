@@ -48,13 +48,12 @@
     ul > li{
         padding: 12px;
         border-bottom: 1px solid #02171b;
-        background: rgb(18, 104, 18);
         transition: .5s ease;
         list-style-type: none;
         margin: 2px ;
 
         &:hover{
-            color: green ;
+            background: #4dd6f5da;
             transform: scale(1.1) ;
         }
     
