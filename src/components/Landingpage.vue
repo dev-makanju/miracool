@@ -47,6 +47,7 @@ export default {
   .main-text {
     margin-top: .7rem;
     text-align: center;
+    padding: 5px;
     h1 {
       color: rgba(238, 238, 238, 0.9333333333);
       font-size: 40px;
@@ -60,6 +61,7 @@ export default {
 
     p {
       color: #4dd6f5da;
+      font-weight: thin;
 
       @media (max-width: 450px) {
         font-size: 16px;
@@ -87,7 +89,7 @@ export default {
           flex-direction: column;
 
           & .img{
-              background: linear-gradient(#4dd6f5da , #000000);
+              background: #4dd6f5da;
               border-radius: 50%;
               overflow: hidden;
               display: flex;
