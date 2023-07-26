@@ -24,14 +24,25 @@
 <style lang="scss">
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Plus+Jakarta+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300&family=Plus+Jakarta+Sans&display=swap');
 
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+}
 
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Open Sans', sans-serif;
+}
+
+span, p, li {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+ul, ol {
+  list-style-type: none;
 }
 
 html{
