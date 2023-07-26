@@ -48,6 +48,7 @@ export default {
     margin-top: .7rem;
     text-align: center;
     padding: 5px;
+    
     h1 {
       color: rgba(238, 238, 238, 0.9333333333);
       font-size: 40px;
@@ -64,7 +65,8 @@ export default {
       font-weight: thin;
 
       @media (max-width: 450px) {
-        font-size: 16px;
+        font-size: 13px;
+        margin-top: 8px;
       }
     }
   }

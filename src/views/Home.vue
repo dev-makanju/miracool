@@ -1,11 +1,10 @@
 <template>
      <div class="landing_page">
-          <Landingpage />
-          <socials />
+         <Landingpage />
+         <socials />
      </div>
-
      <div class="project-wrapper">
-          <Projects/>
+         <Projects/>
      </div>
 
      <div class="overview flex">
@@ -69,12 +68,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-     .project-wrapper{
-          background:  #0b3b44 ;
-          background-image: linear-gradient( 45deg , #092f36 25% , transparent 25% ,
-          transparent 75% , #092f36 75% , #092f36 ), 
-          linear-gradient( -45deg , #092f36 25% , transparent 25% ,
-          transparent 75% , #092f36 75% , #092f36 );
+     .project-wrapper {
+          width: 80%;
+          margin: 0px auto;
      }
 
      .overview{

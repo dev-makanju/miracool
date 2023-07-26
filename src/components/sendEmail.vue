@@ -36,7 +36,7 @@
         margin: 0 auto;
         border: 3px solid transparent ;
         border-top-color:  rgb(176, 180, 180);
-        border-bottom-color:  rgb(34, 81, 87);
+        border-bottom-color:  #225157;
         border-radius: 50%;
         animation: spin ease 1000ms infinite;
     }
