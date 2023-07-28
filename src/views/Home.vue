@@ -7,8 +7,8 @@
          <Projects/>
      </div>
 
-     <div class="overview flex">
-          <h1 style="color:green;"># <span style="color:#eee">Projects</span></h1>
+     <h1 class="text-wrapper">My Portfolio</h1>
+     <div class="my-portfolio">
           <Overview :project="project" v-for="(project , index) in projects" :key="index"/>
      </div>
 </template>
@@ -60,6 +60,22 @@ export default {
                          link:"https://Triangu.ml",
                          github:"https://github.com/dev-makanju/Triangu",
                     },
+                    {
+                         projectName:'Task manager',
+                         ProjectDesc:'This app helps all its users to magnage thier daily todos , all you have to do is create account and visit your dashboard to get started',
+                         photoName:'tasks',
+                         stalk:'Vue.js', 
+                         link:"https://task-manager-a.netlify.app",
+                         github:"https://github.com/dev-makanju/task-manager",
+                    },
+                    {
+                         projectName:'Triangu',
+                         ProjectDesc:'Triangu is a personal blog that was built for dev development and also to keep writing about my love for technological advancement.(outdated)',
+                         photoName:'Triangu', 
+                         stalk:'Vue.js | firebase',
+                         link:"https://Triangu.ml",
+                         github:"https://github.com/dev-makanju/Triangu",
+                    },
                ]
           }
      },
@@ -80,5 +96,22 @@ export default {
           flex-direction: column;
           justify-content: center ;
           align-items: center;
+     }
+
+     .my-portfolio {
+          padding-top: 2.5rem;
+          padding-bottom: 6rem;
+          width: 80%;
+          margin: 0px auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+          grid-gap: 2em;
+     }
+
+     .text-wrapper {
+         font-size: 40px;
+         font-weight: bold;
+         color: #0b3b44;
+         text-align: center;
      }
 </style>

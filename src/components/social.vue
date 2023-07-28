@@ -35,7 +35,7 @@
 <style lang="scss" scoped>
 .big-socials-button{
     opacity: .7;
-    background: #4dd6f5da ;
+    background: #225157 ;
     position: fixed ;
     overflow: hidden ;
     z-index: 2;
@@ -53,7 +53,7 @@
         margin: 2px ;
 
         &:hover{
-            background: #4dd6f5da;
+            background: #225157;
         }
     
     }

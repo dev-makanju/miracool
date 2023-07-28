@@ -61,7 +61,7 @@ export default {
     }
 
     p {
-      color: #4dd6f5da;
+      color: #225157;
       font-weight: 300;
 
       @media (max-width: 450px) {
@@ -91,7 +91,7 @@ export default {
           flex-direction: column;
 
           & .img{
-              background: #4dd6f5da;
+              background: #225157;
               border-radius: 50%;
               overflow: hidden;
               display: flex;
