@@ -6,8 +6,15 @@
      <div class="project-wrapper">
          <Projects/>
      </div>
-
-     <h1 class="text-wrapper">My Portfolio</h1>
+     <div class="">
+        <Expirience/>
+     </div>
+     <div class="flex flex-col align-items p-portfolio"> 
+          <div>
+             <h1 class="text-wrapper">My Portfolio</h1>
+             <div class="underline"/>
+          </div> 
+     </div>
      <div class="my-portfolio">
           <Overview :project="project" v-for="(project , index) in projects" :key="index"/>
      </div>
@@ -19,11 +26,16 @@ import Landingpage from '../components/Landingpage.vue'
 import Projects from '../components/Projects.vue'
 import Overview from '../components/Overview.vue'
 import socials from '../components/social.vue'
+import Expirience from '../components/Expirience.vue'
 
 export default {
   name:'Home',
      components:{
-          Landingpage , Projects , Overview , socials
+          Landingpage, 
+          Projects, 
+          Overview, 
+          socials,
+          Expirience
      },
      data(){
           return{
@@ -108,10 +120,17 @@ export default {
           grid-gap: 2em;
      }
 
+     .p-portfolio {
+          @media (max-width: 800px) {
+               margin-top: 13rem;
+          }
+     }
+
      .text-wrapper {
          font-size: 40px;
          font-weight: bold;
          color: #0b3b44;
-         text-align: center;
+         margin-bottom: 4px;
      }
+
 </style>

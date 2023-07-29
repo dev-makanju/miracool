@@ -1,13 +1,11 @@
 <template>
   <div class="container">
-      <!-- <img v-lazy="require(`@/assets/portfolio-icons/mountains.jpg`)"> -->
      <div class="background-image">
-        <img v-lazy="require(`@/assets/portfolio-icons/mountains.jpg`)">
+      
      </div>
      <div class="parent-body">
          <BallOverlay/>
      </div>
-     <div class="overlay"></div>
      <div v-scrollanimation class="move-bar"></div>
      <div class="contain">
           <div class="img">
@@ -61,7 +59,7 @@ export default {
     }
 
     p {
-      color: #225157;
+      color: #ffffff8a;
       font-weight: 300;
 
       @media (max-width: 450px) {
@@ -70,10 +68,10 @@ export default {
       }
     }
   }
-  .background-image img{
+  .background-image {
       width: 100vw;
       height: 535px;
-      object-fit: cover;
+      background: #225157;
   }
 
   .container{
@@ -91,7 +89,7 @@ export default {
           flex-direction: column;
 
           & .img{
-              background: #225157;
+              background: #ffffff89;
               border-radius: 50%;
               overflow: hidden;
               display: flex;
@@ -108,13 +106,6 @@ export default {
           }
       }
 
-      .overlay{
-          background: rgba(0, 0, 0, 0.515);
-          width: 100vw;
-          height: 600px ;
-          position: absolute;
-          top: 0px;  
-      }
 
       .move-bar{
            @media (min-width:768px){

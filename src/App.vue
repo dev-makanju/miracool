@@ -33,6 +33,29 @@
   box-sizing: border-box;
 }
 
+.flex{
+  display: flex;
+}
+
+.items-center {
+  justify-content: center;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.underline {
+    border: 2px solid #225157;
+    width: 50px;
+    height: 3px;
+    border-radius: 5px;
+}
+
 h1,h2,h3,h4,h5,h6{
   font-family: 'Open Sans', sans-serif;
 }
@@ -70,7 +93,7 @@ html{
 }
 
 .footer-main{
-     background:  #071013;
+     background:  #225157;
      padding: 40px 0px;
      max-width: 1440px;
      margin: 0px auto;

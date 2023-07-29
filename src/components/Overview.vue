@@ -80,6 +80,12 @@
        border-radius: 7px;
        overflow: hidden;
        border: 1px solid #22515723;
+       transition: .3s ease;
+
+       &:hover {
+          transform: scale(1.02); 
+          box-shadow: 0px 4px 7px rgba(0, 0, 0, .3);
+       }
 
        .content-wrapper img{
           width: 100%;

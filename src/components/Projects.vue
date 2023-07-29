@@ -119,19 +119,12 @@
                 justify-content: center;
             }
 
-           img{
+            img {
                 height: 400px;
                 width: 300px;
                 object-fit: cover;
             }
         }
-    }
-    
-    .underline {
-        border: 2px solid #225157;
-        width: 50px;
-        height: 3px;
-        border-radius: 5px;
     }
 
     .btn-button {

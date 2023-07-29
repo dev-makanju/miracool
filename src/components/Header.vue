@@ -132,7 +132,7 @@
 <style lang="scss" scoped>
 
 header{
-    background:#4dd6f5da;
+    background: #225157;
     width: 100%;
 
     .nav-1{
