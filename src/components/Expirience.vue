@@ -12,6 +12,17 @@
                   <p>{{ skill.score }}%</p>
                </div>
             </div>
+            <div class="flex year-exp">
+               <div>
+                  <h1>2+</h1>
+                  <p>YEARS OF EXPERIENCE</p>
+               </div> 
+               <div>
+                  <h1>12+</h1>
+                  <p>PROJECTS COMPLETED</p>
+               </div>
+
+            </div>
          </div>
          <div class="flex custom-gap">
             <div class="box-background">
@@ -90,6 +101,21 @@
 </script>
 
 <style lang="scss" scoped>
+   .year-exp{
+      gap: 1rem;
+      
+      div {
+         margin-top: 2rem;
+         h1 {
+            font-size: 60px;
+         }
+
+         p{
+            font-size: 10px;
+         }
+      } 
+   }
+
    .skill-section {
       color: #225157;
       padding-top: 1rem;
@@ -142,7 +168,7 @@
       align-items: center;
 
       img {
-         
+
          width: 40px;
          height: 40px;
       }

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
      <div class="background-image">
-      
+       
      </div>
      <div class="parent-body">
          <BallOverlay/>
@@ -9,7 +9,7 @@
      <div v-scrollanimation class="move-bar"></div>
      <div class="contain">
           <div class="img">
-               <img v-lazy="require(`@/assets/portfolio-icons/test-image.png`)"> 
+              <img v-lazy="require(`@/assets/portfolio-icons/removeAv.png`)">
           </div>
           <div class="main-text">
             <h1>{{ name}}</h1>
@@ -94,7 +94,7 @@ export default {
               overflow: hidden;
               display: flex;
               justify-content: center;
-              padding: 10px 10px 0 0;
+              padding: 0px 0px 0px 0px;
               width: 200px;
               height: 200px;
 

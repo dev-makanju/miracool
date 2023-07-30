@@ -208,7 +208,7 @@ header{
                 flex: 1;
                 box-shadow: 0px 0px .2px .1px rgba(110, 108, 108, 0.3) ;
                 height: 100vh;
-                background: #4dd6f5;
+                background: #fff;
             }
         }
 
