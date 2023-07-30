@@ -81,6 +81,18 @@
        overflow: hidden;
        border: 1px solid #22515723;
        transition: .3s ease;
+       transform: translateY(-40px);
+
+        &.before-enter{
+            opacity: 0;
+            transform: translateY( 70px);
+            transition: 1s ease-in-out all; 
+        }
+
+        &.enter{
+            opacity: 1;
+            transform: translateY(0px);
+        }
 
        &:hover {
           transform: scale(1.02); 

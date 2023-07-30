@@ -18,15 +18,13 @@ export default {
   data: () => ({
     shown: false,
   }),
-
-  beforeMount() {
+  beforeMount(){
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault()
       this.installEvent = e
       this.shown = true
     })
   },
-
   methods: {
     dismissPrompt() {
       this.shown = false
@@ -58,9 +56,10 @@ export default {
      flex-direction: column;
      transition: .5s ease ;
      transform: translateX(-400px); 
+     box-shadow: 0px 2px 5px rgba(0, 0, 0, .2);
 
      &.is-active {
-        transform: translateX(0px);
+        transform: translateX(0px); 
      }
 
      h1 {
@@ -80,6 +79,7 @@ export default {
       align-items: center;
       justify-content: space-between;
       margin-top: 1rem;
+      cursor: pointer;
    }
 
    .btn-pwa {

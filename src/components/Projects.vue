@@ -10,13 +10,13 @@
         </div>
         <div class="about-desc">
             <h1>About Me</h1>
-            <div class="underline"/>
-            <p>{{ About }}</p>
+            <div v-scrollanimation class="underline"/>
+            <p v-scrollanimation class="about-animate">{{ About }}</p>
             
                 <BreadcrumbItem>
                     <a class="link" href="/files/makanju.pdf" download="Makanju-Oluwafemi">
                         <div class="first_c flex">
-                           <button class="btn-button">Download CV</button>
+                           <button v-scrollanimation class="btn-button">Download CV</button>
                         </div> 
                     </a>
                 </BreadcrumbItem>
@@ -138,6 +138,31 @@
         &:hover {
             background: #225157;
             color: #FFFFFF;
+        }
+
+
+        &.before-enter{
+            opacity: 0;
+            transform: translateY( 70px);
+            transition: 1s ease-in-out all; 
+        }
+
+        &.enter{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    .about-animate {
+        &.before-enter{
+            opacity: 0;
+            transform: translateY( 70px);
+            transition: 1s ease-in-out all; 
+        }
+
+        &.enter{
+            opacity: 1;
+            transform: translateY(0px);
         }
     }
 </style>   

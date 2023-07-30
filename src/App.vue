@@ -50,9 +50,18 @@
 
 .underline {
     border: 2px solid #225157;
-    width: 50px;
     height: 3px;
     border-radius: 5px;
+    width: 60px;
+
+    &.before-enter{
+      width: 1px;
+      transition: 1s ease-in-out all; 
+    }
+
+    &.enter{
+      width: 60px;
+    }
 }
 
 h1,h2,h3,h4,h5,h6{

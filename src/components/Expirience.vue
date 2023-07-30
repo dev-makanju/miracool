@@ -1,7 +1,7 @@
 <template>
    <div class="section">
       <h1>Skill & Experience</h1>
-      <div class="underline"/>
+      <div v-scrollanimation class="underline"/>
       <div class="section-main">
          <div class="skill-section">
             <h4>My Advantages</h4>
@@ -14,11 +14,11 @@
             </div>
             <div class="flex year-exp">
                <div>
-                  <h1>2+</h1>
+                  <h1 v-scrollanimation class="h-years">2+</h1>
                   <p>YEARS OF EXPERIENCE</p>
                </div> 
                <div>
-                  <h1>12+</h1>
+                  <h1 v-scrollanimation class="h-years">12+</h1>
                   <p>PROJECTS COMPLETED</p>
                </div>
 
@@ -101,6 +101,18 @@
 </script>
 
 <style lang="scss" scoped>
+   .h-years {
+      &.before-enter{
+         font-size: 10px;
+         transition: 1s ease-in-out all; 
+      }
+
+      &.enter{
+         opacity: 1;
+         font-size: 60px;
+      }
+   }
+
    .year-exp{
       gap: 1rem;
       

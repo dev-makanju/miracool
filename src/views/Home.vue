@@ -12,7 +12,7 @@
      <div class="flex flex-col align-items p-portfolio"> 
           <div>
              <h1 class="text-wrapper">My Portfolio</h1>
-             <div class="underline"/>
+             <div v-scrollanimation class="underline"/>
           </div> 
      </div>
      <div class="my-portfolio">
