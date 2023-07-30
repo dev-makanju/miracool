@@ -103,13 +103,14 @@
 <style lang="scss" scoped>
    .h-years {
       &.before-enter{
-         font-size: 10px;
-         transition: 1s ease-in-out all; 
+            opacity: 0;
+            transform: scale(1.6) ;
+            transition: .5s ease-in-out all; 
       }
 
       &.enter{
-         opacity: 1;
-         font-size: 60px;
+            opacity: 1;
+            transform: scale(1) ;
       }
    }
 
