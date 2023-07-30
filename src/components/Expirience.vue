@@ -47,11 +47,11 @@
                </div>
                <div class="content-area second">
                   <div class="flex">
-                     <p class="table-1">2022</p><p class="table">&nbsp;-&nbsp;</p><p class="table">Present</p>
+                     <p class="table-1">2023 March</p><p class="table">&nbsp;-&nbsp;</p><p class="table">2023</p>
                   </div>
                   <h1>Frontend Engineer</h1>
                   <div class="flex space">
-                     <p class="table">Company</p><p class="table">&nbsp;-&nbsp;&nbsp;&nbsp;</p><p class="table">Alumunite Africa</p>
+                     <p class="table">Company</p><p class="table">&nbsp;-&nbsp;&nbsp;&nbsp;</p><p class="table">Kompletecare</p>
                   </div>
                   <div class="flex space">
                      <p class="table">Job type</p><p class="table">&nbsp;-&nbsp;&nbsp;&nbsp;</p><p class="table">Remote</p>
@@ -82,16 +82,16 @@
                   score:'90'
                },
                {
-                  img:'html.png',
-                  score:'92'
+                  img:'nextjs-icon.png',
+                  score:'60'
                },
                {
-                  img:'html.png',
-                  score:'92'
+                  img:'nuxt-js-icon.png',
+                  score:'90'
                },
                {
-                  img:'html.png',
-                  score:'92'
+                  img:'react-js-icon.png',
+                  score:'62'
                }
 
             ]

@@ -80,7 +80,7 @@
        border-radius: 7px;
        overflow: hidden;
        border: 1px solid #22515723;
-       transition: .3s ease;
+       transition: .2s ease;
        transform: translateY(-40px);
 
         &.before-enter{
@@ -95,8 +95,8 @@
         }
 
        &:hover {
-          transform: scale(1.02); 
-          box-shadow: 0px 4px 7px rgba(0, 0, 0, .3);
+          transform: scale(1.01); 
+          box-shadow: 0px 4px 7px rgba(0, 0, 0, .1);
        }
 
        .content-wrapper img{

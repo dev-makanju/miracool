@@ -34,7 +34,7 @@
                        </li>
                       <li>
                           <BreadcrumbItem>
-                                <a class="tar_link" href="https://twitter.com/mira_code" target="__blank">
+                                <a class="tar_link" href="https://twitter.com/_miracode" target="__blank">
                                     <font-awesome-icon :icon="['fab' , 'twitter']"/>
                                 </a>
                             </BreadcrumbItem>

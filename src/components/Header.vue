@@ -60,7 +60,7 @@
                       </li>
                       <li>
                             <BreadcrumbItem>
-                                <a class="tar_link" href="https://twitter.com/mira_code" target="__blank" >
+                                <a class="tar_link" href="https://twitter.com/_miracode" target="__blank" >
                                     <font-awesome-icon :icon="['fab' , 'twitter']"/>
                                 </a>
                             </BreadcrumbItem>
@@ -261,7 +261,6 @@ header{
                     border-radius: 27px;
                     background: #156373;
                     margin: 20px;
-                    box-shadow: 0px 2px 5px rgba(56, 55, 55, 0.3) , 0px 2px 7px 5px rgba(56, 55, 55, 0.2);
                 }
             }
         }
@@ -364,7 +363,7 @@ header{
         border-radius: 3px;
         margin: 2px ;
         transition: all .3s ease;
-        box-shadow: 0px 2px 5px rgba(56, 55, 55, 0.3) , 0px 2px 7px 5px rgba(56, 55, 55, 0.2);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
 
         @media (min-width: 800px){
              min-width: 35px;
