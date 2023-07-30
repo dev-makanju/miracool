@@ -1,8 +1,6 @@
 <template>
   <div class="container">
-     <div class="background-image">
-       
-     </div>
+     <div class="background-image"></div>
      <div class="parent-body">
          <BallOverlay/>
      </div>
@@ -32,7 +30,7 @@ export default {
   },
   data(){
     return{
-        name:'Oluwafemi Makanju',
+        name:"Hi, i'm Miracool",
         stalk:'Software Developer',
         homeText:"let's talk about your project.",
     }

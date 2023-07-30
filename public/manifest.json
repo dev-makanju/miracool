@@ -3,10 +3,10 @@
     "short_name": "Miracool",
     "name": "personal portfolio",
     "start_url": "/",
-    "background_color": "#4dd6f5da",
+    "background_color": "#225157",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#4dd6f5da",
+    "theme_color": "#225157",
     "icons": [
         {
             "src": "/img/icons/android-chrome-192x192.png",

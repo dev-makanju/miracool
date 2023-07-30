@@ -18,6 +18,7 @@
      <div class="my-portfolio">
           <Overview :project="project" v-for="(project , index) in projects" :key="index"/>
      </div>
+     <PwaInstall/>
 </template>
 
 <script>
@@ -27,6 +28,7 @@ import Projects from '../components/Projects.vue'
 import Overview from '../components/Overview.vue'
 import socials from '../components/social.vue'
 import Expirience from '../components/Expirience.vue'
+import PwaInstall from '../components/PwaInstall.vue'
 
 export default {
   name:'Home',
@@ -35,7 +37,8 @@ export default {
           Projects, 
           Overview, 
           socials,
-          Expirience
+          Expirience,
+          PwaInstall
      },
      data(){
           return{
