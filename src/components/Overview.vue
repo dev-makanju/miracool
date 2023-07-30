@@ -1,5 +1,5 @@
 <template>
-    <div v-scrollanimation class="project-overview" id="sec-project">
+    <div v-scrollanimation class="project-overview" id="project">
         <div class="content-wrapper top">
             <img v-scrollanimation  v-lazy="require(`@/assets/portfolio-icons/${project.photoName}.png`)" alt="">
             <div class="overlay">

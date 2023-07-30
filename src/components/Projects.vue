@@ -1,5 +1,5 @@
 <template>
-    <div class="about">
+    <div class="about" id="about">
         <div class="contain">
            <div class="avater-main">
                <div class="rectangle"/>

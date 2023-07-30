@@ -18,7 +18,7 @@
                     <h3>Contact</h3>
                     <p><router-link class="links" :to="{name:'Home'}">Home</router-link></p>
                     <p v-if="isProjectVisble"><a class="links" href="#sec-project" v-smooth-scroll>Project</a></p>
-                    <p><router-link class="links" :to="{name:'About'}">About</router-link></p>
+                    <p v-if="isProjectVisble"><a class="links" href="#about" v-smooth-scroll>About</a></p>
                     <p><router-link class="links" :to="{name:'Contact'}">Contact me</router-link></p>
                 </div>
             </div>
@@ -125,7 +125,7 @@
                 padding: 5px;
 
                 &:hover{
-                    color:  #156373 ;
+                    color:  #FFFF ;
                 }
             }
 
@@ -138,7 +138,7 @@
         transition: .5s ease;
 
         &:hover{
-            color: #156373 ;
+            color: #FFF ;
             transform: scale(1.5) ;
         }
     }

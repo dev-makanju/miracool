@@ -4,7 +4,6 @@
             <Header/> 
             <router-view/>
         </div>
-
         <div class="footer-main">
               <Footer/>    
         </div>    

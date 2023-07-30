@@ -40,10 +40,10 @@
                     <li @click="close"><router-link class="links" :to="{name:'Home'}">Home</router-link>
                 </li>
                     <li @click="close" v-if="isProjectVisble">
-                        <a class="links"  href="#sec-project" v-smooth-scroll>project</a>
+                        <a class="links"  href="#project" v-smooth-scroll>project</a>
                     </li>
                     <li @click="close"> 
-                        <router-link class="links" :to="{name:'About'}">About</router-link> 
+                        <a class="links"  href="#about" v-smooth-scroll>About</a> 
                     </li>
                     <li @click="close"> 
                         <router-link class="links" :to="{name:'Contact'}">Contact</router-link> 
