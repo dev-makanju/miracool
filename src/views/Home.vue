@@ -111,7 +111,6 @@ export default {
 
           @media (max-width: 450px) {
              padding: 0px 1rem;
-             height: 65vh;
           }
 
           & .title {
