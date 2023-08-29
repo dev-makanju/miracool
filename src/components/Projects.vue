@@ -11,15 +11,17 @@
         <div class="about-desc">
             <h1>About Me</h1>
             <div v-scrollanimation class="underline"/>
-            <p v-scrollanimation class="about-animate">{{ About }}</p>
+            <p v-scrollanimation class="about-animate" v-html="About">
+                
+            </p>
             
-                <BreadcrumbItem>
-                    <a class="link" href="/files/makanju.pdf" download="Makanju-Oluwafemi">
-                        <div class="first_c flex">
-                           <button v-scrollanimation class="btn-button">Download CV</button>
-                        </div> 
-                    </a>
-                </BreadcrumbItem>
+            <BreadcrumbItem>
+                <a class="link" href="/files/makanju.pdf" download="Makanju-Oluwafemi">
+                    <div class="first_c flex">
+                        <button v-scrollanimation class="btn-button">Download CV</button>
+                    </div> 
+                </a>
+            </BreadcrumbItem>
         </div>     
     </div>
 </template>
@@ -32,7 +34,7 @@
                goal:"Let's talk about your project </>",
                text:'Amazing Landing Page',
                About:
-                     "My name is Makanju Oluwafemi Emmanuel, a computer science undergraduate at Obafemi Awolowo University ile-ife Nigeria.  I’m an enthusiastic software developer and a technical writer, with a keen focus on making the web a better environment. I love to motivate myself to be consistent with learning and working smart   I like to resolve design problems, create smart user interface and imagine useful interaction, developing rich web experiences & web applications, I’m proficient in converting high quality designs to a functional and responsive front end code. In a dynamic environment, I work well with using effective communication skills to interact with other co-workers. At my leisure, I enjoy traveling and watching  football. ",
+                     "My name is Makanju Oluwafemi Emmanuel, I’m an enthusiastic software developer and a technical writer, with a keen focus on making the web a better environment. </br></br>I love to motivate myself to be consistent with learning and working smart I like to resolve design problems, create smart user interface and imagine useful interaction, developing rich web experiences & web applications, I’m proficient in converting high quality designs to a functional and responsive front end code. </br></br> In a dynamic environment, I work well with using effective communication skills to interact with other co-workers. At my leisure, I enjoy traveling and watching  football.",
             }
         }
     }

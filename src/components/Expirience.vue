@@ -79,19 +79,19 @@
                },
                {
                   img:'vue.svg',
-                  score:'90'
+                  score:'92'
                },
                {
                   img:'nextjs-icon.png',
-                  score:'60'
+                  score:'75'
                },
                {
                   img:'nuxt-js-icon.png',
-                  score:'90'
+                  score:'92'
                },
                {
                   img:'react-js-icon.png',
-                  score:'62'
+                  score:'85'
                }
 
             ]
